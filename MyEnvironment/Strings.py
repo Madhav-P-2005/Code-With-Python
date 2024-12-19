@@ -1,7 +1,18 @@
 name = "Harry"
 print(type(name))
 
-# Slicing 
+# Slicing :- 
+
+# slice(start, stop[, step])
+
+# i)  Start is the starting index from which we need to slice the array arr. By
+# default set to 0.
+
+# ii)  stop is the ending index, before which the slicing operation would end. By
+# default equal to the length of the array.
+
+# iii) step is the steps the slicing process would take from start to stop. By default
+# set to 1.
 
 nameShort = name[0:3] # Start from index 0 all the way till 3 (excluding 3)
 print(nameShort)
@@ -13,6 +24,7 @@ print(name[1: 4])
 print(name[:4])  # is same as print(name[0:4])
 print(name[1:])  # is same as print(name[1:5])
 print(name[1:5])
+print()
 
 
 # Slicing With Skip Value
@@ -20,6 +32,27 @@ word = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 print(word[1:6:2]) 
 print(word[1:9]) 
 print(word[1:9:4]) 
+print()
+
+
+# Repeating the Strings :-  The repetition operator is denoted by '*'symbol and is useful to repeat the string for several times. For example, str * n repeats the string for n times.
+str = 'Core Python '
+print(str * 2)
+print()
+
+s = str[5:7] * 3
+print(s)
+print()
+
+
+# Python Concatenation Strings :- We can use '+' on strings to attach a string at the end of another string. This operator '+' is called addition operator when used on numbers. But, when used on strings, it is called 'concatenation ' operator since it joins or concatenates the strings.
+
+s1 = 'Core'
+s2 = "Python"
+s3 = s1 + " " +  s2
+print("Concatenated output :- ", s3)
+print()
+
 
 
 # String Functions 

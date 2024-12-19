@@ -45,7 +45,10 @@ print(fruits)  # Output: ['apple', 'banana', 'cherry']
 coordinates = (10, 20)
 print(coordinates)  # Output: (10, 20)
 
-# range: Represents a sequence of numbers.
+
+# range: Represents a sequence of numbers. The range() function can take a maximum of three arguments:
+# syntax :- range(start, stop, step) . 
+# The start and step parameters in range() are optional.
 
 number_range = range(1, 5)
 print(list(number_range))  # Output: [1, 2, 3, 4]
