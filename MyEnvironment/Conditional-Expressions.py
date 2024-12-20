@@ -86,3 +86,16 @@ else :
     print("You are below the age of consent")
 
 print("End of the program")
+
+
+# Ternary Conditional Operator :- The ternary conditional operator, also known as the conditional expression, is a compact way to execute conditional statements in Python. It's useful for writing concise and readable code.
+
+# Syntax :- <value_if_true> if <condition> else <value_if_false>
+
+x = 10
+result = "x is greater than 5" if x > 5 else "x is not greater than 5"
+
+# Ternary Operator in List Comprehensions :- 
+numbers = [1,2,3,4,5]
+even_odd = ["even" if num % 2 == 0 else "odd" for num in numbers]
+print(even_odd) # Output: ['odd', 'even', 'odd', 'even', 'odd']
