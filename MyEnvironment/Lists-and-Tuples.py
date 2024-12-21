@@ -210,6 +210,232 @@ print(list(zipped))  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
 
 
 
+'''
+
+1)  Write a python program to read 10 elements in the list and print them one
+by one.
+
+a. Print the list in last in first out mode
+b. Find how many elements are positive and how many are negative
+c. Search for a specific element in the list
+d. Sort the elements in the list
+e. Find the largest and smallest elements in the list
+f. Find the sum of all positive elements leaving zero’s
+g. Find how many positive numbers are there in the first half of the
+list and in second half of the list.
+
+'''
+
+# a) Print the list in last in first out mode :- 
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+for i in lst:
+    print(lst[-i] , end=' ')
+print()
+
+
+# b) Find how many elements (counts) are positive and how many are negative
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+count_positive=0
+count_negative=0
+for j in lst:
+    if j>0:
+        count_positive+=1
+    else:
+        count_negative+=1
+
+print(f"No of Positive Numbers in list are :- ",count_positive)
+print(f"No of Negative Numbers in list are :- ",count_negative)
+
+
+# c) Search for a specific element in the list
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+flag=False
+key=int(input("Enter the element you want to search :-  "))
+for i in range(n):
+    if key==lst[i]:
+        print(f"{key} is present in location {i}")
+        flag=True
+    else:
+        flag=False
+
+if key>n:
+    print(f"{key} Not Found ! in the list ")
+
+
+# d. Sort the elements in the list
+# 1) Ascending Order :- 
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+print("Elements before Sorting :-  \n")
+for i in range(n):
+    print(lst[i])
+
+flag=False
+print("Elements after Sorting :- \n")
+for i in range(n-1):
+    for j in range(n-i-1):
+        if lst[j] > lst[j+1]:
+            flag=True
+            temp = lst[j]
+            lst[j] = lst[j+1]
+            lst[j+1] = temp
+        else:
+            flag=False
+    
+if flag==False:
+    print("It is in descending order ")
+else:
+   print(f"Sorted Elements are (ascending order: small to big): {lst}")
+
+print()
+
+# 2) Descending Order :- 
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+print("Elements before Sorting :-  \n")
+for i in range(n):
+    print(lst[i])
+
+flag=False
+print("Elements after Sorting :- \n")
+for i in range(n-1):
+    for j in range(n-i-1):
+        if lst[j] < lst[j+1]:
+            flag=True
+            temp = lst[j]
+            lst[j] = lst[j+1]
+            lst[j+1] = temp
+        else:
+            flag=False
+    
+if flag==False:
+    print("It is in descending order ")
+else:
+   print(f"Sorted Elements are (ascending order: small to big): {lst}")
+
+
+# e) Find the largest and smallest elements in the list
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+
+print("Displaying the elements in the list :- ")
+for i in range(n):
+    print(lst[i])
+
+large=lst[0]
+for j in range(n):
+    if large < lst[j]:
+        large=lst[j]
+
+
+print(f"Largest element in the list is ",large)
+
+small=lst[0]
+for j in range(n):
+    if small > lst[j]:
+        small=lst[j]
+
+print(f"Smallest element in the list is ",small)
+
+# or (simple way) :- 
+
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+
+print("Displaying the elements in the list :- ")
+for i in range(n):
+    print(lst[i])
+
+large = max(lst)
+small = min(lst)
+print(f"Largest element in the list is ",large)
+print(f"Smallest element in the list is ",small)
+
+
+# f) Find the sum of all positive elements leaving zero’s
+lst=[]
+print("Enter the size of the list :-  ")
+n=int(input())
+for i in range(n):
+    value=int(input(f"Enter the element {i} :- "))
+    lst.append(value)
+
+
+print("Displaying the elements in the list :- ")
+for i in range(n):
+    print(lst[i])
+
+sum=0
+flag=False
+for j in lst:
+    if j > 0:
+        flag=True
+        sum = sum+j
+    else:
+        continue
+
+if flag==True:
+    print(f"Sum of Positive elements in the list :- ",sum)
+
+
+
+# g) Positive numbers in first half and second half of the list 
+List  = []
+n = int(input("enter the size :- "))
+
+for i in range(n):
+    value = int(input(f"Enter value {i + 1} : "))
+    List.append(value)
+
+mid_point = len(List)//2
+first_half = List[:mid_point]
+second_half = List[mid_point:]
+positive_in_firsthalf = sum(1 for num in first_half if num > 0)
+positive_in_secondhalf = sum(1 for num in second_half if num > 0)
+
+print(f"Number of positive numbers in first Half " , positive_in_firsthalf)
+print(f"Number of positive numbers in second Half " , positive_in_secondhalf)
+
+
+
+
 # Tuples :-  
 # A Tuple is collection of immutable heterogeneous python objects
 
