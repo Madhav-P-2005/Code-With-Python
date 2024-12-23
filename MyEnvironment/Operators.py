@@ -134,7 +134,9 @@ print(x is not z)  # Output: True (x and z refer to different objects)
 
 # Use Cases :- 
 
-''' Strings :-  Checking if a substring exists within a string.
+'''
+
+Strings :-  Checking if a substring exists within a string.
 
 Lists :-  Determining if an element is present in a list.
 
@@ -142,7 +144,9 @@ Tuples :- Identifying if an item exists in a tuple.
 
 Sets :- Verifying membership in a set.
 
-Dictionaries :- Checking if a key exists in a dictionary. '''
+Dictionaries :- Checking if a key exists in a dictionary. 
+
+'''
 
 
 # in :- Returns True if the specified value is found in the sequence.

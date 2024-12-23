@@ -156,8 +156,6 @@ else:
     print('{} made {} '.format(name,runs))
 
 
-
-
 # Slicing Dictionaries :- No, slicing is not possible with dictionaries. Slicing is a feature available for sequences like lists, tuples, and strings. Dictionaries are unordered collections of key-value pairs, so they do not support indexing or slicing.
 
 
