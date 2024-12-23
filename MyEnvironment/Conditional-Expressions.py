@@ -1,3 +1,20 @@
+# Control Statements :- Control statements are statements which control or change the flow of execution. The following are the control statements available in Python:
+'''
+● if statement
+● if... else statement
+● if... elif... else statement
+● while loop
+● for loop
+● else suite
+● break statement
+● continue statement
+● pass statement
+● assert statement
+● return statement
+
+'''
+
+
 # Syntax :-  if conditon:
              # Statements to execute if
              # condition is true

@@ -132,11 +132,36 @@ print(d["name"])
 print(d["name"]["first"])
 
 
+# Write a Python program to store and retrieve player names and their run scores using a dictionary. Ensure to prompt for the player's name and runs ?
+dict = {}
+print("How many players ? ",end=" ")
+n = int(input())
+for i in range(n):
+    print("Enter Player Name " , end = "")
+    p = input()
+    print("Enter the runs ",end = " ")
+    r = int(input())
+    dict.update({p:r})
+
+print("\nPlayers in this Match :- ")
+for pname in dict.keys():
+    print(pname)
+
+print("Enter the player name :-  ",end= " ")
+name=input()
+runs=dict.get(name,-1)
+if runs==-1:
+    print(f"{name} Player Not Found ")
+else:
+    print('{} made {} '.format(name,runs))
+
+
 # Slicing Dictionaries :- No, slicing is not possible with dictionaries. Slicing is a feature available for sequences like lists, tuples, and strings. Dictionaries are unordered collections of key-value pairs, so they do not support indexing or slicing.
 
 
-# Sets :- A set is an unordered collection of unique elements. Sets are mutable, meaning you can add or remove elements, but all the elements must be immutable (e.g., numbers, strings, tuples). Sets are particularly useful for operations that involve membership testing, removing duplicates, and mathematical operations like unions and intersections. Slicing is not possible in Sets 
 
+
+# Sets :- A set is an unordered collection of unique elements. Sets are mutable, meaning you can add or remove elements, but all the elements must be immutable (e.g., numbers, strings, tuples). Sets are particularly useful for operations that involve membership testing, removing duplicates, and mathematical operations like unions and intersections. Slicing is not possible in Sets 
 
 # Key Characteristics of Sets :- 
 
