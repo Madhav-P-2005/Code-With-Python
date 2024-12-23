@@ -43,72 +43,73 @@
 
 
 '''
-# print(1)
-# print(2)
-# print(3)
-# print(4)
-# print(5)
-# print() 
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print() 
 
-# for i in range(1, 6):
-#     print(i,end=' ') # Output :- 1 2 3 4 5 
-# print()
+for i in range(1, 6):
+    print(i,end=' ') # Output :- 1 2 3 4 5 
+print()
 
 
 # While - Loop :- 
-# i=1
+i=1
 
-# while(i<6):
-#     print(i , end=' ')
-#     i+=1
-# print()
+while(i<6):
+    print(i , end=' ')
+    i+=1
+print()
 
 
 # Quiz ans 1:- 
-# i = 1
-# while(i<51):
-#     print(i)
-#     i+=1
-# print()
+i = 1
+while(i<51):
+    print(i)
+    i+=1
+print()
 
 
 # Quiz ans 2 :-
-# l = [1, "Bridul" , "Shree Priya" , True , 34.56, "Raghav" , "Sumit Bilagi"]
-# i=0
-# while i<len(l):
-#     print(l[i])
-#     i+=1
+l = [1, "Bridul" , "Shree Priya" , True , 34.56, "Raghav" , "Sumit Bilagi"]
+i=0
+while i<len(l):
+    print(l[i])
+    i+=1
 
 
 
 # For Loop :-
+'''
+range: Represents a sequence of numbers. The range() function can take a maximum of three arguments:
+syntax :- range(start, stop, step) . 
+The start and step parameters in range() are optional.
 
-# range: Represents a sequence of numbers. The range() function can take a maximum of three arguments:
-# syntax :- range(start, stop, step) . 
-# The start and step parameters in range() are optional.
+'''
 
-
-# for i in range(4):
-#     print(i)
-# print()
+for i in range(4):
+    print(i)
+print()
 
 
 # for loop in List :- 
-# l = [1 , 4, 6 , 234 , 6 , 764]
-# for i in l:
-#     print(i , end= ' ')
-# print()
+l = [1 , 4, 6 , 234 , 6 , 764]
+for i in l:
+    print(i , end= ' ')
+print()
 
 # for loop in Tuple :-
-# t = (6 , 231 , 75 ,75 ,122)
-# for i in t:
-#     print(i, end= ' ')
-# print()
+t = (6 , 231 , 75 ,75 ,122)
+for i in t:
+    print(i, end= ' ')
+print()
 
 # for loop in String :- 
-# s = "Harry"
-# for i in s:
-#     print(i)
+s = "Harry"
+for i in s:
+    print(i)
 
 
 # For Loop with Else :- 
