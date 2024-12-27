@@ -26,11 +26,21 @@ def Convert():
 
 Convert()
  
+# or
+
+def f_to_c(f):
+      return 5*(f-32)/9
+
+f = int(input("Enter temperature in F : "))
+c = f_to_c(f)
+print(f"{round(c,2)} C")
+
+
 
 
 # Ans 3 :- 
 print("a")
-print("a")
+print("a") 
 print("c" , end="")
 print("d" , end="")
 print()
@@ -38,12 +48,47 @@ print()
 
 
 # Ans 4 :- 
+'''
+sum(1) = 1
+sum(2) = 1 + 2 
+sum(3) = 1 + 2 + 3 
+sum(n) = 1 + 2 + 3 + 4 + 5 .... + n
 
+'''
 
+def Sum(n):
+     if n==1 :return 1 
+     else:
+          return Sum(n-1) + n
+     
+
+n = int(input("Enter any Number :-  "))
+print(f"Sum of {n} Natural Numbers are :- ",Sum(n))
 
 
 
 # Ans 5 :- 
+# Using Function :- 
+def Pattern1(user):
+  for i in range(0,user+1):
+     for j in range(user, i, -1):  # j starts at i and decrements by 1 each iteration
+          print("*", end=" ")
+     print()  
+   
+
+user = int(input("Enter the number of rows: "))
+Pattern1(user)
+
+
+# Using Recursion :- 
+def Pattern(user):
+     if user==0:return  # return stops the statement 
+     print("*" * user)
+     Pattern(user-1)
+
+
+user = int(input("Enter the size of elements :- "))
+Pattern(user)
 
 
 
@@ -86,6 +131,7 @@ def remove():
 
 List()
 remove()
+
 
 
 
