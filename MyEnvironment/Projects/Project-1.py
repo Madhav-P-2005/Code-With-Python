@@ -4,3 +4,6 @@ rules of this game and write a python program capable of playing this game with 
 user.
 
 '''
+a = "hello"
+
+
