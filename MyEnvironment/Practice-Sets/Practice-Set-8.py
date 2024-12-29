@@ -48,6 +48,7 @@ print()
 
 
 # Ans 4 :- 
+
 '''
 sum(1) = 1
 sum(2) = 1 + 2 
@@ -102,6 +103,15 @@ def Convert_Cms():
 Convert_Cms()
 
 
+# or Using return 
+def inch_to_cms(inches):
+     return inches * 2.54
+
+inches = int(input("Enter the value in inches :-  "))
+print(f"The corresponding value in cms is {inch_to_cms(inches)}")
+
+
+
 
 # Ans 7 :- 
 list_of_Elements=[]
@@ -114,23 +124,41 @@ def List():
 
     print("Elements are " , list_of_Elements)
 
-
-def remove():
-     print("Enter the word to be removed from the list :- ")
-     word=input() 
-     if word in list_of_Elements:
-          list_of_Elements.remove(word)
-     print(f"Elements after removing {word} from the list is :- ",list_of_Elements)
-     print("List after Strip method from String  :- ")
-     string = "  ".join(list_of_Elements)
-     print("Elements after converting list to string :-  ",string)
-     string.strip()
-     print(string)
-
-
-
 List()
-remove()
+
+def remove(list_of_Elements):
+     new_list=[]
+     print("Enter the word to be Modified ")
+     word = input()
+     print("Enter the part of that word to be striped ")
+     word_part = input()
+
+     for item in list_of_Elements:
+        if item.strip() == word:
+            modified_word = item.strip(word_part)
+            new_list.append(modified_word)
+        else:
+            new_list.append(item) 
+
+
+
+     print("Original List Of Elements:", list_of_Elements)
+     print("New List of Elements:", new_list)
+
+remove(list_of_Elements)
+
+# or 
+
+def rem(l , word):
+    n = []
+    for item in l:
+        if not(item==word):
+            n.append(item.strip(word))
+    return n
+        
+
+l=["Harry" , "Rohan" , "Shubham"]
+print(rem(l, "Roh"))
 
 
 
