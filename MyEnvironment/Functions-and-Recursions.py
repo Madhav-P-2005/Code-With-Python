@@ -606,6 +606,11 @@ myfunction()
 print('Outside myfunction  a = ', a)   # Output :- a = 2
 
 
+# Write a Python program to read a number and check if it is less than 50 . Use functions for reading and for checking . It should work till the read number is zero ?
+
+
+# Write a Python program on Variable Length Arguments  ? 
+
 
 # Lambda/Anonymous function :- 
 
@@ -649,6 +654,8 @@ greet_user = lambda name : print("Hey there " , name)
 # lambda call
 greet_user("Madhav P")
 
+
+# Write a Python Program on Lambda Functions with Different Methods ? 
 
 
 
