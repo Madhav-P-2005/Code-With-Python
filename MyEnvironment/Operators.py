@@ -1,86 +1,123 @@
-# Operators 
+# # Operators 
 
-# Arithmetic Operators
-a = 7
-b =4 
-c = a + b
-print(c)
+# # Arithmetic Operators
+# a = 7
+# b =4 
+# c = a + b
+# print(c)
 
-# Assignment Operators 
-a = 4-2
-print(a)
+# # Assignment Operators 
+# a = 4-2
+# print(a)
 
-b = 6
-b += 3 # Increment the value of b by 3 and then assign it to b 
-b -= 3  # Decrement the value of b by 3 and then assign it to b 
-print(b)
-
-
-# Comparison Operators 
-d = 5 < 4 
-print(d)
-
-d = 5 <= 4 
-print(d)
-
-d = 5 >= 4 
-print(d)
+# b = 6
+# b += 3 # Increment the value of b by 3 and then assign it to b 
+# b -= 3  # Decrement the value of b by 3 and then assign it to b 
+# print(b)
 
 
-d = 5!=5 
-print(d)
+# # Comparison Operators 
+# d = 5 < 4 
+# print(d)
 
-d = 5==5 
-print(d)
+# d = 5 <= 4 
+# print(d)
 
-
-# Logical Operators 
-e = True or False
-print(e)
-i = True and False
-print(i)
-
-# Truth table of 'or
-print("True or False is ",True or False)
-print("True or True is ",True or False)
-print("False or True is ",False or True)
-print("False or False is ",False or False)
-
-# Truth table of 'and'
-print("True and False is ",True and False)
-print("True and True is ",True and False)
-print("False and True is ",False and True)
-print("False and False is ",False and False)
-
-print(not(False))
-print(not(True))
+# d = 5 >= 4 
+# print(d)
 
 
-# Type() Function
-a = 31.2
-t = type(a) # class <int>
-print(t)
+# d = 5!=5 
+# print(d)
 
-# Type Casting 
-a = 32.9
-b = complex(a)
-print(b)
-print(type(b))
+# d = 5==5 
+# print(d)
+
+
+# # Logical Operators 
+# e = True or False
+# print(e)
+# i = True and False
+# print(i)
+
+# # Truth table of 'or
+# print("True or False is ",True or False)
+# print("True or True is ",True or False)
+# print("False or True is ",False or True)
+# print("False or False is ",False or False)
+
+# # Truth table of 'and'
+# print("True and False is ",True and False)
+# print("True and True is ",True and False)
+# print("False and True is ",False and True)
+# print("False and False is ",False and False)
+
+# print(not(False))
+# print(not(True))
+
+
+# # Type() Function
+# a = 31.2
+# t = type(a) # class <int>
+# print(t)
+
+# # Type Casting 
+# a = 32.9
+# b = complex(a)
+# print(b)
+# print(type(b))
 
 
 # Input Function
-a = input("Enter number 1 :- ") # 1 
-b = input("Enter number 2 :- ") # 2
-print("Number 2 is :- " ,b)
-print("Number a is :-  " ,a)
-print("Sum is ", a +b) # output 12 as it takes string it concatinates 
+# a = input("Enter number 1 :- ") # 1 
+# b = input("Enter number 2 :- ") # 2
+# print("Number 2 is :- " ,b)
+# print("Number a is :-  " ,a)
+# print("Sum is ", a +b) # output 12 as it takes string it concatinates 
 
 
-a = int(input("Enter number 1 :- ")) # 1 
-b = int(input("Enter number 2 :- ")) # 2
-print("Number 2 is :- " ,b)
-print("Number a is :- " ,a)
-print("Sum is ", a +b) # output 3 
+# a = int(input("Enter number 1 :- ")) # 1 
+# b = int(input("Enter number 2 :- ")) # 2
+# print("Number 2 is :- " ,b)
+# print("Number a is :- " ,a)
+# print("Sum is ", a +b) # output 3 
+
+
+
+# Integer Division :- 
+
+'''
+Integer division returns the floor of the division. That is, the values after the decimal point are discarded.
+It is written as ‘//’ in Python 3. So, 1//3 = 0, 2//3 = 0 and 3//3 = 1. Integer values are precisely stored, so they are safe to use in comparisons.
+ 
+'''
+
+# Float Division :- 
+
+'''
+Float division returns a floating point approximation of the result of a division.
+For example, Only a certain number of values after the decimal can be stored, so it is not possible to store an exact binary representation of many floating point numbers. This sometimes leads to problems when comparing numbers or when rounding.
+
+'''
+
+def main():
+    A = int(input("Enter the value for A :- "))
+    B = int(input("Enter the value for B :- "))
+    # Print seven lines as described above
+    print("Sum is :- " , A+B)   
+    print("Difference is :- " ,A-B)   
+    print("Product is :- " ,A*B)   
+    print("Interger Division :- " ,A//B)   
+    print("Float Division :- ", A/B)   
+    print("Remainder is :- ",A%B)   
+    print("Product is :- ", A**B)   
+    
+
+if __name__ == '__main__':
+    main()
+
+
+
 
 # Identity Operators :- Identity operators in Python are used to compare the memory locations of two objects. They determine whether two variables point to the same object in memory. There are two identity operators :-
 
