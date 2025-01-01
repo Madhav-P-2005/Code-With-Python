@@ -18,12 +18,19 @@ sh
 sh
 python.exe -m pip install --upgrade pip
 
+
 # Installing Required Modules :- 
 Install the required modules using the following commands:
 
 sh
 pip install pyjokes
 pip install pyttsx3
+
+
+# To run a Particular file / folder Specifically :-
+
+sh
+python MyEnvironment/Practice-Sets/Practice-Set-9.py
 
 ```
 
