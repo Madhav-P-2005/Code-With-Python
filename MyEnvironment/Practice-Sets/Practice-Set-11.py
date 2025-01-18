@@ -1,4 +1,5 @@
 # Ans 1 :- 
+
 class TwoDVector:
     def __init__(self, i , j):
         self.i= i
@@ -52,6 +53,7 @@ D.bark()
 
 
 # Ans 3 :- 
+
 class Employee:
     def __init__(self, salary , Increment):
         self.salary = salary
@@ -89,7 +91,7 @@ print(f"New Salary :-  {new_salary}")
 
 
 
-# OR
+# # OR
 
 
 
@@ -114,7 +116,7 @@ class Employee:
             return self.salary + self.Increment
 
 
-# Usage 
+# # Usage 
 print("Enter your salary :-  ")
 salary_input = int(input())
 print("Enter your Increment :- ")
@@ -169,27 +171,22 @@ print()
 
 '''
 
-1) Current and New Salary :-
+1) Current and New Salary :-  a) self.salary :-  Current salary.
 
- a) self.salary :-  Current salary.
- b) salary :-  New salary after increment.
-
- 
-2) Calculate Ratio :- 
-
- a) salary / self.salary: This gives the ratio of the new salary to the current salary.
- b) Example: If the current salary is 234 and the new salary is 280.8, then 280.8 / 234 = 1.2.
+                              b) salary :-  New salary after increment.
 
  
-3) Subtract 1 :- 
+2) Calculate Ratio :-   a) salary / self.salary: This gives the ratio of the new salary to the current salary.
 
- a) 1.2 - 1: This subtracts 1 to find the increase in terms of the original salary. Example :-  1.2 - 1 = 0.2.
+                        b) Example: If the current salary is 234 and the new salary is 280.8, then 280.8 / 234 = 1.2.
 
- b) This step is crucial because we are interested in the fraction of the increase. Subtracting 1 converts the ratio (1.2) to the actual increment proportion (0.2).
+ 
+3) Subtract 1 :-        a) 1.2 - 1: This subtracts 1 to find the increase in terms of the original salary. Example :-  1.2 - 1 = 0.2.
 
-4) Convert to Percentage :- 
+                        b) This step is crucial because we are interested in the fraction of the increase. Subtracting 1 converts the ratio (1.2) to the actual increment proportion (0.2).
 
-a) 0.2 * 100: This converts the fraction to a percentage. Example: 0.2 * 100 = 20.
+4) Convert to Percentage :-   a) 0.2 * 100: This converts the fraction to a percentage. Example: 0.2 * 100 = 20.
+
 
 
 # Without the -1, the formula would not accurately represent the percentage increment. It would instead give a number that includes the original 100%, not just the increment.
@@ -201,16 +198,13 @@ a) 0.2 * 100: This converts the fraction to a percentage. Example: 0.2 * 100 = 2
 
 3) The ratio is 280.8 / 234 = 1.2.
 
-If you don't subtract 1 :- 
-
-increment = 1.2 * 100 = 120. 
-This would incorrectly imply a 120% increase, rather than the correct 20%.
+If you don't subtract 1 :-  increment = 1.2 * 100 = 120. 
+                            This would incorrectly imply a 120% increase, rather than the correct 20%.
 
 
-By including the -1 :- 
+By including the -1 :-      increment = (1.2 - 1) * 100 = 20
+                            This correctly calculates a 20% increase, which accurately reflects the change from 234 to 280.8.
 
-increment = (1.2 - 1) * 100 = 20
-This correctly calculates a 20% increase, which accurately reflects the change from 234 to 280.8.
 
 
 '''
@@ -243,6 +237,8 @@ result_mul = C1 * C2
 # Print the results
 print(f"Addition Result: {result_add}")  # Expected: 5 + 3j
 print(f"Multiplication Result: {result_mul}")  # Expected: 15j (since 5 * 3j)
+
+
 
 # Formula Breakdown  :-
 
@@ -280,7 +276,72 @@ Grouping Real and Imaginary Parts :-
    
 
 # Ans 5 :- 
+class Vector:
+    def __init__(self, x , y , z):
+        self.x = x
+        self.y = y
+        self.z = z 
+
+    def __add__(self , other):
+        result = Vector(self.x + other.x , self.y + other.y, self.z + other.z)
+        return result 
+
+
+    def __mul__(self , other):
+        result = self.x * other.x + self.y * other.y + self.z * other.z 
+        return result 
+    
+    def __str__(self):
+        return f"Vector({self.x} , {self.y} , {self.z})"
+    
+
+    # Test the implementation 
+v1 = Vector(1 , 2 , 3)
+v2 = Vector(4 , 5 , 6)
+v3 = Vector(7 , 8 , 9)
+
+print(v1 + v2)   # Output :- Vector(5 , 7 , 9)
+
+print(v1 * v2)   # Output :- Vector(8 , 10 , 12)
+
+print(v1 + v3)   # Output :- Vector(11 , 13 , 15)
+
+print(v1 * v3)   # Output :- Vector(5 , 7 , 9)
+
+
+
+
 
 
 
 # Ans 6 :- 
+class Vector:
+    def __init__(self, i , j , k):
+        self.i = i
+        self.j = j 
+        self.k = k
+
+    def __str__(self):
+        return f"{self.i}i + {self.j}j + {self.k}k"
+
+v = Vector(7 , 8 , 10)
+print(v)
+
+
+
+
+
+# Ans 7 :- 
+class Vector:
+    def __init__(self, l):  # l represents the list 
+        self.l = l
+
+
+    def __len__(self):
+        return len(self.l)   # finding length of the l 
+    
+
+    # Test the implementation 
+v1 = Vector([1 , 2 , 3])   # Group the numbers  to a list and pass to l . 
+print(len(v1))
+
