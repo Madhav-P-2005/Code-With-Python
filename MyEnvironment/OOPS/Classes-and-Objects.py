@@ -1,4 +1,5 @@
 '''
+
 💡) Class :- A class is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.
 
 
@@ -24,6 +25,7 @@ Syntax :-  obj = ClassName(parameters)
 Usage :-  Objects are used to interact with the class methods and attributes.
 
 How it works :-  When an object is created, memory is allocated and the __init__ method is called to initialize the attributes.
+
 
 '''
 
@@ -172,6 +174,7 @@ harry.getInfo()
 
 
 
+
 # The __init__() Function :- The __init__() function in Python is a special method, often referred to as a "constructor" in object-oriented programming. It's a type of dunder (double underscore) method that gets called automatically when an instance (object) of a class is created.
 
 '''
@@ -236,7 +239,6 @@ print('\n')
 
  A class method is a method that is bound to the class and not the instance of the class. It can modify class state that applies across all instances of the class. Class methods take a cls parameter that points to the class—and not the instance—when the method is called.
 
- 
  '''
 
 # Syntax :- 
@@ -275,29 +277,29 @@ MyClass.class_method()
 
 # Example :- 
 
-# class Employee:
-#       a = 1   # Class Attribute 
-#       def show(self):
-#             print(f"The class value of a is {self.a}")
+class Employee:
+      a = 1   # Class Attribute 
+      def show(self):
+            print(f"The class value of a is {self.a}")
     
-# E = Employee()
-# E.a = 45  # output :- prints instance(object) value  =  45 
+E = Employee()
+E.a = 45  # output :- prints instance(object) value  =  45 
 
-# E.show()   # Output :- The class value of a is 45
+E.show()   # Output :- The class value of a is 45
 
 
 # To overcome this we use @classmethod 
-# class Employee:
-#       a = 1   # Class Attribute 
+class Employee:
+      a = 1   # Class Attribute 
 
-#       @classmethod
-#       def show(self):   # self or cls or something ...  anything will work.
-#             print(f"The class value of a is {self.a}")
+      @classmethod
+      def show(self):   # self or cls or something ...  anything will work.
+            print(f"The class value of a is {self.a}")
     
-# E = Employee()
-# E.a = 45  # output :- Takes  class Attribute value  = 1 Because of @classmethod 
+E = Employee()
+E.a = 45  # output :- Takes  class Attribute value  = 1 Because of @classmethod 
 
-# E.show()   # Output :- The class value of a is 1
+E.show()   # Output :- The class value of a is 1
 
 
 
@@ -444,33 +446,19 @@ print(rect.area)  # Output: 200
 
 '''
 
-1) Access Syntax :-
+1) Access Syntax :- a) Methods: You need to use method calls like get_width() and set_width(value). 
+                    b) Properties: You access them like attributes, e.g., rect.width and rect.width = value.
 
-a) Methods: You need to use method calls like get_width() and set_width(value).
+2) Readability and Clean Code :-   a) Methods: The code can become cluttered with method calls.
+                                   b) Properties: The code looks cleaner and more natural, like regular attribute access.
 
-b) Properties: You access them like attributes, e.g., rect.width and rect.width = value.
+3) Encapsulation :-    a) Methods: The logic to get and set values is separated into methods.
+                       b) Properties: The logic to get, set, and compute values is encapsulated within properties, promoting better abstraction.
 
-2) Readability and Clean Code :-
+4) Consistency :-      a) Methods: Every access and modification must go through the method, ensuring validation but can be cumbersome.
+                       b) Properties: Automatic validation when setting values, ensuring consistency and ease of use.
 
-a) Methods: The code can become cluttered with method calls.
-
-b) Properties: The code looks cleaner and more natural, like regular attribute access.
-
-3) Encapsulation :-
-
-a) Methods: The logic to get and set values is separated into methods.
-
-b) Properties: The logic to get, set, and compute values is encapsulated within properties, promoting better abstraction.
-
-4) Consistency :-
-
-a) Methods: Every access and modification must go through the method, ensuring validation but can be cumbersome.
-
-b) Properties: Automatic validation when setting values, ensuring consistency and ease of use.
-
-5) Advanced Features :-
-
-Properties can have computed values (like area) and can include deleters, providing more flexibility without changing the interface.
+5) Advanced Features :-  Properties can have computed values (like area) and can include deleters, providing more flexibility without changing the interface.
 
 '''
 
@@ -502,6 +490,46 @@ To overload an operator, you define a special method in your class. These specia
 3) Use the overloaded operators with these objects.
 
 '''
+
+
+# Example :- 
+class Number:
+     def __init__(self , n ):
+          self.n = n
+
+     # Overload the + operator
+     def __add__(self , num):
+          return self.n + num.n   # Return a new Number instance
+
+n = Number(1)
+m = Number(2)
+
+
+
+print(n + m)   # Output :- unsupported operand type(s) for +: 'Number' and 'Number'
+result = n + m 
+print(result.n) # Output: 3
+
+# Explanation :- 
+
+'''
+
+1) Class Definition :-  The __init__ method initializes the n attribute.
+
+2) Overloaded __add__ Method :- a) This method takes another Number instance (num) as an argument.
+                                b) It returns a new Number instance with the sum of self.n and num.n.
+
+3) Creating Instances :-   n = Number(1) and m = Number(2) create two instances of Number.
+
+4) Using the + Operator :-  n + m uses the overloaded __add__ method.
+                           a) This adds the n values of both instances (1 + 2 = 3).
+                           b) A new Number instance is returned with this sum.
+
+5) Accessing the Result :-  result.n accesses the n attribute of the result, which is 3.
+
+
+'''
+
 
 # Arithmetic Operators :- 
 
@@ -547,7 +575,10 @@ To overload an operator, you define a special method in your class. These specia
 
 5) __gt__(self, other): Greater than (>)
 
-6) __ge__(self, other): Greater than or equal to (>=)'''
+6) __ge__(self, other): Greater than or equal to (>=)
+
+
+'''
 
 # Bitwise Operators  :- 
 
@@ -565,7 +596,9 @@ To overload an operator, you define a special method in your class. These specia
 
 6)  __rshift__(self, other) :-  Right shift (>>)
 
+
 '''
+
 
 
 # Assignment Operators :- 
@@ -586,7 +619,10 @@ To overload an operator, you define a special method in your class. These specia
 
 7) __ipow__(self, other) :-  In-place exponentiation (**=)
 
+
 '''
+
+
 
 # Container Emulation :- 
 
@@ -602,7 +638,10 @@ To overload an operator, you define a special method in your class. These specia
 
 5) __contains__(self, item): Membership test (item in self)
 
+
 '''
+
+
 
 # String Representation :- 
 
@@ -612,7 +651,10 @@ To overload an operator, you define a special method in your class. These specia
 
 2) __repr__(self): Formal string representation (repr(self))
 
+
 '''
+
+
 
 # Object Creation and Deletion :- 
 
@@ -624,7 +666,10 @@ To overload an operator, you define a special method in your class. These specia
 
 3)  __del__(self) :-  Destructor (called when an object is about to be destroyed)
 
+
 '''
+
+
 
 # Custom Context Manager :- 
 
@@ -633,6 +678,7 @@ To overload an operator, you define a special method in your class. These specia
 1) __enter__(self) :-  Enter the runtime context
 
 2) __exit__(self, exc_type, exc_value, traceback) :- Exit the runtime context
+
 
 '''
 
@@ -655,46 +701,3 @@ class MyResource:
 with MyResource() as resource:
     print("Using resource")
 print()
-
-
-# Example :- 
-class Number:
-     def __init__(self , n ):
-          self.n = n
-
-     # Overload the + operator
-     def __add__(self , num):
-          return self.n + num.n   # Return a new Number instance
-
-n = Number(1)
-m = Number(2)
-
-
-
-print(n + m)   # Output :- unsupported operand type(s) for +: 'Number' and 'Number'
-result = n + m 
-print(result.n) # Output: 3
-
-# Explanation :- 
-
-'''
-
-1) Class Definition :-  The __init__ method initializes the n attribute.
-
-2) Overloaded __add__ Method :- 
-
-a) This method takes another Number instance (num) as an argument.
-
-b) It returns a new Number instance with the sum of self.n and num.n.
-
-3) Creating Instances :-   n = Number(1) and m = Number(2) create two instances of Number.
-
-4) Using the + Operator :-  n + m uses the overloaded __add__ method.
-
-a) This adds the n values of both instances (1 + 2 = 3).
-
-b) A new Number instance is returned with this sum.
-
-5) Accessing the Result :-  result.n accesses the n attribute of the result, which is 3.
-
-'''
