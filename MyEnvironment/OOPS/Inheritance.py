@@ -24,6 +24,7 @@ How it works :-  The child class inherits methods and attributes from the parent
 
 
 # Example :-
+
 class Employee:
     company = "ITC"
     def show(self ):
@@ -167,6 +168,7 @@ print()
 # Super Method() :-
 
 ''' 
+
 The super() method in Python is a built-in function used to call methods from a parent class. It's particularly useful in inheritance to ensure that the child class can access and override the parent class's methods. The super() function returns a temporary object of the superclass that allows you to call its methods.
 
 '''
@@ -212,16 +214,16 @@ class Manager(Programmer):
        print("Constructor of Manager")
     c = 3
 
-# E = Employee()  # Output :-  Constructor of Employee
-# print(E.a)  # Prints the class a Attribute 
+E = Employee()  # Output :-  Constructor of Employee
+print(E.a)  # Prints the class a Attribute 
 
 
-# P = Programmer()  # Output :- Constructor of Employee
-# print(P.a , P.b)  # Prints the class  a & b Attribute 
+P = Programmer()  # Output :- Constructor of Employee
+print(P.a , P.b)  # Prints the class  a & b Attribute 
 
 
-# M = Manager()  # Output :- Constructor of Employee
-# print(M.a , M.b , M.c)  # Prints the class a , b & c Attribute 
+M = Manager()  # Output :- Constructor of Employee
+print(M.a , M.b , M.c)  # Prints the class a , b & c Attribute 
 
 M = Manager()
 print(M.a , M.b , M.c)
