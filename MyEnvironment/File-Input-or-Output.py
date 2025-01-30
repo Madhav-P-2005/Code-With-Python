@@ -1,15 +1,22 @@
 # FILE HANDLING IN PYTHON
 
-# Ram :- volatile (temporary)
-# HDD :- Non Volatile (permanent)
+'''
 
-# File handling is an important part of any web application.
-# Python has several functions for creating, reading, updating, and deleting files. 
+>>> Ram :- volatile (temporary)
+>>> HDD :- Non Volatile (permanent)
 
+File handling is an important part of any web application.
+Python has several functions for creating, reading, updating, and deleting files. 
+
+'''
 
 # File Handling
 
-# The key function for working with files in Python is the open() function. The open() function takes two parameters; filename, and mode. There are four different methods (modes) for opening a file :-
+'''
+
+>>>  The key function for working with files in Python is the open() function. The open() function takes two parameters; filename, and mode. There are four different methods (modes) for opening a file :-
+
+'''
 
 '''
 
@@ -28,6 +35,7 @@ In addition you can specify if the file should be handled as binary or text mode
 # Syntax :- 
 
 '''
+
 To open a file for reading it is enough to specify the name of the file :-
     
 f = open("demofile.txt")
@@ -39,9 +47,11 @@ them.
 
 '''
 
+
 # I) Open a File on the Server :-
 
 '''
+
 # To open the file, use the built-in open() function.
 # The open() function returns a file object, which has a read() method for reading the content of the file :-
 
@@ -53,8 +63,11 @@ print(f.read())
 
 
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Open-a-File-on-the-Server.txt")
+
 data = f.read()   # To Read the file 
-print(data)  # Output :- Madhav is a Bad Boy
+
+print(data)            # Output :-  Madhav is a Bad Boy
+
 f.close
 
 
@@ -62,9 +75,13 @@ f.close
 # Close Files :- It is a good practice to always close the file when you are done with it.
 
 # Example :-  Close the file when you are finish with it :-
+
 f = open("demofile.txt", "r")
+
 print(f.readline())
+
 f.close()
+
 
 
 
@@ -93,11 +110,22 @@ f = open("myfile.txt", "w")
 # II) To Write a File :- 
 
 st = "Hey Harry You are amazing"
+
 f = open("To-Write-a-File.txt" , "w")
+
 f.write(st)
+
 f.close
 
+'''
+
+Output :-  Hey Harry You are amazing . This is a demo file which Represents how to create a file in your desired Path
+
+'''
+
+
 # or 
+
 
 import os
 
@@ -105,6 +133,7 @@ import os
 st = "Hey Harry You are amazing . This is a demo file which Represents how to create a file in your desired Path"
 
 # Define the path where you want to create the file
+
 folder_path = r"E:\Python Tutorial - Code With Harry\MyEnvironment\Files"
 
 
@@ -148,13 +177,15 @@ path = r"E:\Python Tutorial - Code With Harry\MyEnvironment\Files\To-Write-a-Fil
 
 
 file_name = "To-Write-a-File.txt"
+
 file_path = os.path.join(folder_path, file_name)
+
 
 # Create and write to the file
 with open(file_path, "w") as f:
     f.write(st)
 
-print(f"File created at: {file_path}")
+print(f"File created at: {file_path}")        # Output :-  Hey Harry You are amazing . This is a demo file which Represents how to create a file in your desired Path
 
 
 # Write to an Existing File :- To write to an existing file, you must add a parameter to the open() function :-
@@ -169,57 +200,81 @@ ii) "w" :-  Write - will overwrite any existing content
 # i) Example :- 
 # Create a File "Appending-A-File.txt"
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Appending-A-File.txt", "w")
-data= f.write("Hello Guys , This is First Line I am writing ! ")
-print(data)
+
+data= f.write("Hello Guys , This is First Line I am writing ! ")           
+
+print(data)               
+
 
 # Appending :- 
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Appending-A-File.txt" , "a")
+
 f.write("\n Now the file has more Content ! # Appending Content \n")
+
 f.close()
+
 
 # ii) Example :- Open the file "Appending-A-File.txt"  and overwrite the content :-
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Appending-A-File.txt", "w")
+
 f.write("Woops! I have deleted the content!")
+
 f.close()
 
-#open and read the file after the overwriting:
+
+# open and read the file after the overwriting :- 
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Appending-A-File.txt", "r")
+
 print(f.read())
-# Note:[ "the "w" method will overwrite the entire file."]
+
+# Note :- ["the "w" method will overwrite the entire file."]
 
 
 
 
-# III) Read Lines in a File :- You can return one line by using the readline() method:
+# III) Read Lines in a File  :-  You can return one line by using the readline() method:
 
 # Example :- 
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Open-a-File-on-the-Server.txt")
+
 lines = f.readlines()  # Returns a list 
-print(lines , type(lines))  # Output :- ['Madhav is a Bad Boy . \n', 'ReadLines Body :- \n', 'I am third Line \n', 'This is a demo to represent how to use ReadLines() function  in a File . '] <class 'list'>
+
+print(lines , type(lines))          # Output :- ['Madhav is a Bad Boy . \n', 'ReadLines Body :- \n', 'I am third Line \n', 'This is a demo to represent how to use ReadLines() function  in a File . '] <class 'list'>
+
 
 # ReadLine() :- 
 
 line1 = f.readline()
-print(line1 , type(line1)) # Output :- Madhav is a Bad Boy .  <class 'str'>
+
+print(line1 , type(line1))           # Output :- Madhav is a Bad Boy .  <class 'str'>
+
 
 line2 = f.readline()
-print(line2 , type(line2)) # Output :- ReadLines() and ReadLine() Body :-  <class 'str'>
+
+print(line2 , type(line2))           # Output :- ReadLines() and ReadLine() Body :-  <class 'str'>
+
 
 line3 = f.readline()
-print(line3 , type(line3)) # Output :- I am third Line  <class 'str'>
+
+print(line3 , type(line3))           # Output :- I am third Line  <class 'str'>
+
 
 line4 = f.readline()
-print(line4 , type(line4)) # Output :- This is a demo to represent how to use ReadLines() function  in a File .  <class 'str'>
+
+print(line4 , type(line4))           # Output :- This is a demo to represent how to use ReadLines() function  in a File .  <class 'str'>
+
 
 line5 = f.readline()
-print(line5=="" , type(line5)) # Output :- True <class 'str'>
+
+print(line5=="" , type(line5))       # Output :- True <class 'str'>
+
 
 
 # Using While Loop :- 
 line = f.readline()
 
 # while(line!=""):
-print(line)  # Output :- Madhav is a Bad Boy . 
+print(line)                          # Output :-  Madhav is a Bad Boy . 
 line = f.readline()
 
 f.close()
@@ -244,9 +299,11 @@ This is a demo to represent how to use ReadLines() function  in a File .
 
 # Delete a File :- To delete a file, you must import the OS module, and run its os.remove() function :-
 
+
 # Example :-  Remove the file ""
 import os
 os.remove("demofile.txt")
+
 
 # Check if File exist :- To avoid getting an error, you might want to check if the file exists before you try to delete it :-
 
@@ -264,6 +321,7 @@ else:
 f = open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Open-a-File-on-the-Server.txt")
 print(f.read())
 f.close
+
 
 # The same can be written using with Statement like this :- 
 with open("E:\Python Tutorial - Code With Harry\MyEnvironment\Files\Open-a-File-on-the-Server.txt") as f:
