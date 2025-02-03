@@ -43,7 +43,83 @@ class MyClass:
 
 # Example :- Create an object named p1, and print the value of x :
 p1 = MyClass()  
-print(p1.x)
+print(p1.x)      # Output :- 5
+
+
+
+
+# Ellipse Object (...) :- 
+
+'''
+
+Ellipsis, represented by ... in Python, is a built-in object that is technically an instance of the EllipsisType. While it might seem obscure at first, it is a versatile tool used in various contexts, especially in type hinting, slicing, and placeholder scenarios.
+
+'''
+
+
+# Definition :- Ellipsis (...) is a singleton object in Python, which means there is only one instance of it throughout a program. It is represented by three consecutive dots (...), and it has the type <class 'ellipsis'>.
+
+
+# Key Features :- 
+
+'''
+
+   >> It's a constant and immutable.
+   >> Only one instance exists, so Ellipsis is ... is always True.
+
+'''
+
+#  Syntax :-  
+...
+
+if ... == Ellipsis:
+    print("True")   # Output :- True 
+
+
+# Working and Behavior :- 
+print(...)    # Output :- Ellipsis
+
+
+
+# Advantages of Ellipsis :- 
+
+'''
+
+   1) Readability :-  Makes code cleaner and easier to understand when used as a placeholder.
+
+   2) Flexibility :-  Allows for abstracting away details, especially in slicing or type annotations.
+
+   3) Prototyping :-  Helps during development for incomplete code.
+
+'''
+
+
+# Limitations :- 
+
+'''
+
+   1) It is not inherently functional—it does nothing by itself.
+
+   2) Its use can confuse readers if overused or used in non-standard ways.
+
+'''
+
+
+
+'''
+
+Aspect	                                     Details
+
+Symbol	                                      ...
+Built-In Name	                              Ellipsis
+Type	                                      <class 'ellipsis'>
+Singleton	                                  Yes (only one instance exists)
+Introduced In	                              Always available (since early Python)
+Use Cases	                                  Type hinting, slicing, placeholder, marker
+Libraries	                                  Common in NumPy, Pandas, and type hints
+
+'''
+
 
 
 # Class and Object Example :- 
@@ -62,14 +138,18 @@ print(Harry.name , Harry.salary , Harry.language)   # Output :- Harry bhai  1200
 # Here name is Object(instance) attribute and salary and language are class Attributes as they belong to the class . 
 
 
+
+
 # Instance Vs Class Attribute 
 class Employee:
        language = "Py"  # This is a class Attribute 
        salary = 1200000
 
 harry = Employee()
-harry.language = "Javascript"   # This is an instance attribute
-print(harry.language , harry.salary) # Output :- Javascript 1200000
+harry.language = "Javascript"          # This is an instance attribute
+print(harry.language , harry.salary)         # Output :- Javascript 1200000
+
+
 
 
 
@@ -105,14 +185,14 @@ p1.myfunc()
 
 # Example :-  Delete the age property from the p1 object :- 
 del p1.age
-# p1.myfunc()   # Output :- AttributeError: 'Person' object has no attribute 'age'
+p1.myfunc()               # Output :- AttributeError: 'Person' object has no attribute 'age'
 
 
 # Delete Objects :- You can delete objects by using the del keyword :-
 
 # Example :-  Delete the p1 object :-
 del p1
-# p1.myfunc()   # Output :- NameError: name 'p1' is not defined
+p1.myfunc()               # Output :- NameError: name 'p1' is not defined
 
 
 
@@ -128,6 +208,7 @@ first parameter of any function in the class :-
 '''
 
 # Example 
+
 class Employee:
        language = "Python"   # This is a classs Attribute 
        salary = 1200000
@@ -140,26 +221,29 @@ class Employee:
 
 
 harry = Employee()
-harry.language = "JavaScript"   # This is an instance attribute 
+harry.language = "JavaScript"       # This is an instance attribute 
 
 # Two ways :-  1) harry.getInfo()  and  2) Employee.getInfo(harry)
 
 harry.getInfo()  # Output :- TypeError: Employee.getInfo() takes 0 positional arguments but 1 was given . As it contains Employee.getInfo(harry) so  it was passing in Employee class which were not accepting this harry object there in the Method getInfo() 
 
 Employee.getInfo(harry)   # Output :- The language is JavaScript . The salary is 1200000
-Employee.greet(harry)   # Output :- Good Morning
-harry.getInfo()  # Output :- The language is JavaScript . The salary is 1200000
-harry.greet()    # Output :- Good Morning
+Employee.greet(harry)     # Output :- Good Morning
+harry.getInfo()           # Output :- The language is JavaScript . The salary is 1200000
+harry.greet()             # Output :- Good Morning
+
+
 
 
 
 # Static Method :- 
 class Employee:
-       language = "Python"   # This is a classs Attribute 
+       language = "Python"   # This is a class Attribute 
        salary = 1200000
 
        def getInfo(self):   # Method 
               print(f"The language is {self.language} . The salary is {self.salary}") 
+
 
 # @staticmethod :- It is a decorator used why you dont want to pass (self) as  an object to a method . 
 
@@ -171,6 +255,17 @@ class Employee:
 harry = Employee()
 harry.greet()
 harry.getInfo()
+
+
+'''
+
+Output :- 
+
+Good Morning
+The language is Python . The salary is 1200000
+
+'''
+
 
 
 
@@ -228,9 +323,12 @@ class Employee:
 # harry = Employee() # # Output :- I am creating an Object
 harry = Employee("Harry" , 1300000 , "JavaScript")
 harry.name = "Harry"
-print(harry.name , harry.language ,harry.salary)  # Output :- Harry Python 1200000
-# rohan = Employee() # Output :- I am creating an Object
+print(harry.name , harry.language ,harry.salary)            # Output :- Harry Python 1200000
+rohan = Employee()                                       # Output :- I am creating an Object
 print('\n')
+
+
+
 
 
 # Class Method() :- 
@@ -250,7 +348,8 @@ class MyClass:
         print(f"Class method called: {cls.class_attribute}")
 
 # Usage
-MyClass.class_method()
+MyClass.class_method()      # Output :- Class method called: I am a class attribute
+
 
 
 # How it Works:
@@ -265,6 +364,8 @@ MyClass.class_method()
 
 '''
 
+
+
 # Usage :- 
 
 '''
@@ -275,17 +376,21 @@ MyClass.class_method()
 
 '''
 
+
+
 # Example :- 
 
 class Employee:
-      a = 1   # Class Attribute 
+      a = 1         # Class Attribute 
       def show(self):
             print(f"The class value of a is {self.a}")
     
 E = Employee()
-E.a = 45  # output :- prints instance(object) value  =  45 
+E.a = 45           # output :- prints instance(object) value  =  45 
 
-E.show()   # Output :- The class value of a is 45
+E.show()           # Output :- The class value of a is 45
+
+
 
 
 # To overcome this we use @classmethod 
@@ -303,6 +408,7 @@ E.show()   # Output :- The class value of a is 1
 
 
 
+
 # Property Decorators :-
 
 ''' 
@@ -311,6 +417,7 @@ Property decorators in Python are used to define methods in a class that can be 
 
 '''
 
+
 # How it Works :-
  
 '''
@@ -318,6 +425,7 @@ Property decorators in Python are used to define methods in a class that can be 
 Property decorators work by transforming methods into read-only or read-write properties of the class. When you use the @property decorator, it turns the method into a getter for a managed attribute. If you also provide methods decorated with @<property_name>.setter and @<property_name>.deleter, you can control setting and deleting the attribute.
 
 '''
+
 
 # Usage :- 
 
@@ -330,6 +438,8 @@ Property decorators work by transforming methods into read-only or read-write pr
 3) Deleter :- Define a method that deletes an attribute and decorate it with @<property_name>.deleter.
 
 '''
+
+
 
 # Example :- 
 class Employee:
@@ -352,15 +462,17 @@ class Employee:
             self.lname = value.split(" ")[1]
 
 E = Employee()
-E.a = 45  # output :- Takes  class Attribute value  = 1 Because of @classmethod 
+E.a = 45       # output :- Takes  class Attribute value  = 1 Because of @classmethod 
 
 E.name = "Harry Bhai ❤️"
 print(E.fname , E.lname)
-E.show()   # Output :- The class value of a is 1
+E.show()       # Output :- The class value of a is 1
+
 
 
 
 # Without Property Decorators :- 
+
 class Rectangle:
     def __init__(self, width, height):
         self._width = width   # Attribute
@@ -433,11 +545,11 @@ class Rectangle:
 
 # Usage
 rect = Rectangle(5, 10)
-print(rect.width)  # Output: 5
+print(rect.width)   # Output: 5
 print(rect.height)  # Output: 10
-print(rect.area)  # Output: 50
+print(rect.area)    # Output: 50
 rect.width = 20
-print(rect.area)  # Output: 200
+print(rect.area)    # Output: 200
 
 
 
@@ -506,9 +618,10 @@ m = Number(2)
 
 
 
-print(n + m)   # Output :- unsupported operand type(s) for +: 'Number' and 'Number'
+print(n + m)        # Output :- unsupported operand type(s) for +: 'Number' and 'Number'
 result = n + m 
-print(result.n) # Output: 3
+print(result.n)     # Output: 3
+
 
 # Explanation :- 
 
@@ -531,7 +644,9 @@ print(result.n) # Output: 3
 '''
 
 
+
 # Arithmetic Operators :- 
+
 
 '''
 
@@ -549,6 +664,8 @@ print(result.n) # Output: 3
 
 '''
 
+
+
 # Unary Operators :- 
 
 '''
@@ -560,6 +677,7 @@ print(result.n) # Output: 3
 3)  __abs__(self): Absolute value (abs(self))
 
 '''
+
 
 # Comparison Operators :- 
 
@@ -579,6 +697,7 @@ print(result.n) # Output: 3
 
 
 '''
+
 
 # Bitwise Operators  :- 
 
