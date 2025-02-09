@@ -38,6 +38,7 @@ becomes a 'method‘.
 '''
 
 # Defining a Function :- 
+
 '''
 
 Here are simple rules to define a function in Python.
@@ -57,17 +58,23 @@ these parentheses. Define parameters inside these parentheses.
 
 '''
 
+
 # Syntax:- 
+
 ''' 
+
    def function_name(parameters):
           """docstring"""
         statement(s)
 
 '''
 
+
 # Example :- 
+
 def greet(name):
     print("Hello, " + name + ". Good morning!")
+
 '''
 
 This function greets to
@@ -77,11 +84,13 @@ a parameter
 '''
 
 # Calling a Function :- Once we have defined a function, we can call it from another function, program, or even the Python prompt. To call a function we simply type the function name with appropriate parameters.
+
 # example :- 
 def greet(name):
   print("Hello, " + name + ". Good morning!")
 
-greet("XYZ")
+greet("XYZ")       # Output :-  Hello, XYZ. Good morning!
+
 
 
 
@@ -92,8 +101,9 @@ def square_value(num):
     """This function returns the square
 value of the entered number"""
     return num**2
-print(square_value(2))
-print(square_value(-4))
+print(square_value(2))          # Output :-   4
+print(square_value(-4))         # Output :-  16
+
 
 
 # Returning multiple values :- A Python program to return multiple values from a method using tuple
@@ -106,46 +116,49 @@ def fun():
   return (str,x)
 
 # Driver code to test above method
-# str, x = fun() # Assign returned tuple
-# print(str,x)
-demo = fun()
-print(demo)
+str, x = fun() # Assign returned tuple
+print(str,x)           # Output :-    geeksforgeeks 20
+demo = fun()            
+print(demo)            # Output :-   ('geeksforgeeks', 20)
 
 
 
 # A Python program to return multiple values from a method using list 
 # This function returns a list
-# def fun():
-#   str = "geeksforgeeks"
-#   x = 20
-#   return [str, x]
-# list = fun()
-# print(list)
+def fun():
+  str = "geeksforgeeks"
+  x = 20
+  return [str, x]
+list = fun()
+print(list)                # Output :-   ['geeksforgeeks', 20]
 
 
 # Finding Average using function
 
 # Function Definition
-# def avg():
-#    a = int(input("Enter your number :- "))
-#    b = int(input("Enter your number :- "))
-#    c = int(input("Enter your number :- "))
+def avg():
+   a = int(input("Enter your number :- "))
+   b = int(input("Enter your number :- "))
+   c = int(input("Enter your number :- "))
 
-#    average = (a+b+c)/3
-#    print(average)
+   average = (a+b+c)/3
+   print(average)          # Output :-  48.666666666666664
 
-# avg() # Function Call
+avg() # Function Call
 
 
 # Quick Quiz :- 
-# def greet():
-#    name = input("Enter your name :-  ")
-#    print("Good Day",name)
+def greet():
+   name = input("Enter your name :-  ")
+   print("Good Day",name)       # Output :- Good Day Madhav
 
-# greet()
+greet()
+
+
 
 
 # TYPES OF  FUNCTIONS IN  PYTHON  :- 
+
 '''
 
 There are two types of functions in python :-
@@ -158,235 +171,266 @@ There are two types of functions in python :-
 
 # Build In Functions :- 
 
-# 1) print() :- Prints the given objects to the console or a file.
+# 1) print() :-  Prints the given objects to the console or a file.
 
 # Syntax :-  print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 
-# print('Hello, World!') # Output: Hello, World!
+print('Hello, World!')       # Output :- Hello, World!
 
 
 
 # 2) len() :- Returns the length (the number of items) of an object.
 
 # Syntax :- len(s)
-# print(len('hello')) # Output: 5
+
+print(len('hello'))          # Output :-  5
 
 
 
 # 3) type() :- Returns the type of an object.
 
 # Syntax :-  type(object)
-# print(type(5))
-# Output: <class 'int'>
+
+print(type(5))              # Output :-  <class 'int'>
 
 
 
 # 4) int() :- Converts a number or string to an integer.
 
 # Syntax :- int([x[, base]])
-# print(int('10'))
-# Output: 10
+
+print(int('10'))            # Output :-  10
 
 
 
 # 5) str() :- Returns a string version of an object.
 
 # Syntax :- str(object='')
-# print(str(123)) # Output: '123'
+
+print(str(123))             # Output :-  '123'
 
 
 
 # 6) input() :- Reads a line from input.
 
 # Syntax :- input([prompt])
-# name = input('Enter your name: ')
-# print(f'Hello, {name}') # Output: Input prompt and greeting
+
+name = input('Enter your name: ')
+
+print(f'Hello, {name}')      # Output :-  Input prompt and greeting
 
 
 
 # 7) sum() :- Returns the sum of an iterable.
 
 # Syntax :- sum(iterable, /, start=0)
-# print(sum([1, 2, 3]))
-# Output: 6
+
+print(sum([1, 2, 3]))         # Output :-   6
 
 
 
 # 8) max() :- Returns the largest item in an iterable or the largest of two or more arguments.
 
 # Syntax :- max(iterable, *[, key, default])
-# print(max([1, 2, 3])) # Output: 3
+
+print(max([1, 2, 3]))        # Output :-  3
 
 
 
 # 9) min() :- Returns the smallest item in an iterable or the smallest of two or more arguments.
 
 # Syntax :- min(iterable, *[, key, default])
-# print(min([1, 2, 3])) # Output: 1
+
+print(min([1, 2, 3]))        # Output :-  1
 
 
 
 # 10) list() :- Creates a list.
 
 # Syntax :- list([iterable])
-# print(list)
-# print(list('hello')) # Output: ['h', 'e', 'l', 'l', 'o']
+
+print(list('hello'))         # Output :-  ['h', 'e', 'l', 'l', 'o']
 
 
 
 # 11) dict() :- Creates a new dictionary.
 
 # Syntax :- dict([mapping-or-iterable])
-# print(dict(a=1, b=2)) # Output: {'a': 1, 'b': 2}
+
+print(dict(a=1, b=2))        # Output :-  {'a': 1, 'b': 2}
 
 
 
 # 12) set() :- Returns a new set object.
 
 # Syntax :- set([iterable])
-# print(set([1, 2, 2, 3])) # Output: {1, 2, 3}
+
+print(set([1, 2, 2, 3]))     # Output :-  {1, 2, 3}
 
 
 
 # 13) tuple() :- Returns a tuple.
 
 # Syntax :- tuple([iterable])
-# print(tuple([1, 2, 3])) # Output: (1, 2, 3)
+
+print(tuple([1, 2, 3]))     # Output :-  (1, 2, 3)
 
 
 
 # 14) range() :- Returns an immutable sequence of numbers.
 
 # Syntax :- range([start,] stop[, step])
-# print(list(range(1, 5))) # Output: [1, 2, 3, 4]
+
+print(list(range(1, 5)))    # Output :-  [1, 2, 3, 4]
 
 
 
 # 15) abs() :- Returns the absolute value of a number.
 
 # Syntax :- abs(x)
-# print(abs(-5)) # Output: 5
+
+print(abs(-5))              # Output :-  5
 
 
 
 # 16) round() :- Rounds a number to a specified number of decimal places.
 
 # Syntax :- round(number[, ndigits])
-# print(round(5.678, 2)) # Output: 5.68
+
+print(round(5.678, 2))     # Output :-  5.68
 
 
 
 # 17) pow() :- Returns x to the power y.
 
 # Syntax :- pow(x, y[, z])
-# print(pow(2, 3)) # Output: 8
+
+print(pow(2, 3))          # Output :-   8
 
 
 
 # 18) zip() :- Returns an iterator of tuples.
 
 # Syntax :- zip(*iterables)
-# print(list(zip([1, 2, 3], ['a', 'b', 'c']))) # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+print(list(zip([1, 2, 3], ['a', 'b', 'c'])))       # Output :-  [(1, 'a'), (2, 'b'), (3, 'c')]
 
 
 
 # 19) enumerate() :- Returns an enumerate object.
 
 # Syntax :- enumerate(iterable[, start=0])
-# for i, val in enumerate(['a', 'b', 'c']):
-#     print(i, val) 
-# Output:
-# 0 a
-# 1 b
-# 2 c
+
+for i, val in enumerate(['a', 'b', 'c']):
+    print(i, val) 
+
+
+'''
+
+Output :- 
+
+0 a
+1 b
+2 c
+
+'''
 
 
 
 # 20) sorted() :- Returns a new sorted list from the items in an iterable.
 
 # Syntax :- sorted(iterable, *, key=None, reverse=False)
-# print(sorted([3, 1, 2])) # Output: [1, 2, 3]
+
+print(sorted([3, 1, 2]))               # Output :-  [1, 2, 3]
 
 
 
 # 21) filter() :- Constructs an iterator from those elements of the iterable for which the function returns true.
 
 # Syntax :- filter(function, iterable)
-# print(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))) # Output: [2, 4]
+
+print(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4])))        # Output :-  [2, 4]
 
 
 
 # 22) all() :- Returns True if all elements of the iterable are true (or if the iterable is empty).
 
 # Syntax :- all(iterable)
-# print(all([True, True, False])) # Output: False
+
+print(all([True, True, False]))        # Output :-  False
 
 
 
 # 23) any() :- Returns True if any element of the iterable is true. If the iterable is empty, returns False.
 
 # Syntax :- any(iterable)
-# print(any([False, False, True])) # Output: True
+
+print(any([False, False, True]))       # Output :-  True
 
 
 
 # 24) bool() :- Converts a value to a Boolean, True or False.
 
 # Syntax :- bool(x)
-# print(bool(1))
-# Output: True
-# print(bool(0))
-# Output: False
+
+print(bool(1))                        # Output :-  True
+print(bool(0))                        # Output :-  False
 
 
 
 # 25) float() :- Converts a value to a floating-point number.
 
 # Syntax :- float([x])
-# print(float(5))
-# Output: 5.0
+
+print(float(5))                       # Output :- 5.0
 
 
 
 # 26) format(value[, format_spec]) :- Formats a value as a string
 
 # Syntax :- format(value[, format_spec])
-# print(format(1234.5678, '.2f'))  # Output: 1234.57
+
+print(format(1234.5678, '.2f'))       # Output :-  1234.57
 
 
 
 # 27) id(object) :- Returns the identity of an object.
 
 # Syntax :- id(object)
-# print(id(5))  # Output: Unique ID for the integer 5
+
+print(id(5))                         # Output :-  Unique ID for the integer 5
 
 
 
 # 28) getattr(object, name[, default]) :- Returns the value of the named attribute of an object.
  
 # Syntax :- getattr(object, name[, default])
-# class MyClass:
-#     attr = 'value'
-# obj = MyClass()
-# print(getattr(obj, 'attr'))  #
+class MyClass:
+    attr = 'value'
+obj = MyClass()
+
+print(getattr(obj, 'attr'))         # Output :- value
 
 
 
 # 29) map(function, iterable, ...) :- Applies a function to every item of an iterable and returns a list of the results.
 
 # Syntax :- map(function, iterable, ...)
-# print(list(map(lambda x: x * 2, [1, 2, 3])))  # Output: [2, 4, 6]
+
+print(list(map(lambda x: x * 2, [1, 2, 3])))       # Output: [2, 4, 6]
 
 
 
 # 30) eval(expression[, globals[, locals]]) :- Evaluates the specified expression if it's a valid Python expression.
 
 # Syntax :-  eval(expression[, globals[, locals]])
-# print(eval('1 + 2'))  # Output: 3
+
+print(eval('1 + 2'))               # Output: 3
 
 
 
 # Function with Arguments :- 
+
 '''
 
 1) Here, add_numbers(2, 3) specifies that parameters a and b will get values 2 and 3
@@ -403,29 +447,36 @@ values are called 'actual arguments'.
 
 def sum(a, b): # a, b are formal arguments
       c = a+b
-      print(c)
+      print(c)               # Output :-   25
 
 # call the function
 x=10; y=15
-sum(x, y) # x, y are actual arguments
+sum(x, y)   # x, y are actual arguments
 
 
 
 # Return a Value
-# def goodDay(name, ending):
-#    print("Good Day, " + name)
-#    print(ending)
-#   #  return "done"
-#    return 7
+def goodDay(name, ending):
+   print("Good Day, " + name)        # Output :-  Good Day, Harry
+
+   print(ending)                     # Output :-  Thank you
+
+  #  return "done"
+   return 7
 
   
-# a = goodDay("Harry" , "Thank you")
-# # print(a) # output :- done
-# print(a) # output :- 7
+a = goodDay("Harry" , "Thank you")
+print(a)                # output :- done   or   7
+print(a)                # output :- 7
+
+
+
 
 
 # The actual arguments used in a function call are of 4 types:
+
 '''
+
     1) Positional arguments
     2) Keyword arguments
     3) Default arguments
@@ -435,8 +486,14 @@ sum(x, y) # x, y are actual arguments
 
 # 1) Positional arguments :-  
 
-#  ● An argument is a variable, value or object passed to a function or method as input. Positional arguments are arguments that need to be included in the proper position or order.
-#  ● The first positional argument always needs to be listed first when the function is called. The second positional argument needs to be listed second and the third positional argument listed third, etc.
+'''
+
+    ● An argument is a variable, value or object passed to a function or method as input. Positional arguments are arguments that need to be included in the proper position or order.
+
+    ● The first positional argument always needs to be listed first when the function is called. The second positional argument needs to be listed second and the third positional argument listed third, etc.
+
+'''
+
 
 '''
 
@@ -449,9 +506,11 @@ b) The second argument encoding (value 2) is assigned to errors.
 c) The third argument line (value 1) is assigned to line.
 
 '''
+
+
 # Example :-  
 def print_line( encoding  , errors , line ):
-    print(line , errors  ,encoding )  # Output: 1 2 3
+    print(line , errors  ,encoding )         # Output: 1 2 3
 
 
 line = 1
@@ -460,95 +519,165 @@ errors = 3
 print_line(errors , encoding , line)
 
 
+
+
+
 # 2) Keyword arguments :- 
 
-# ● Keyword arguments are related to the function calls.
-# ● Using keyword arguments in a function call, the caller identifies the arguments by the parameter name.
-# ● Allows to skip arguments or place them out of order, the Python interpreter use the
-# ● keywords provided to match the values with parameters.
+'''
+
+    ● Keyword arguments are related to the function calls.
+
+    ● Using keyword arguments in a function call, the caller identifies the arguments by the parameter name.
+
+    ● Allows to skip arguments or place them out of order, the Python interpreter use the  keywords provided to match the values with parameters.
+
+'''
 
 # Example :- 
 def function1(date , year):
-    print("date : " , date)  # 20
-    print("year : " , year)  # 1975
+    print("date : " , date)  # Output :-  date :  20
+    print("year : " , year)  # Output :-  year :  1975
     return
 
 function1(year=1975 , date=20)
 
 
 
+
 # 3) Default arguments :- 
 
-# ●  Default Argument :- argument that assumes a default value if a value is not provided in the function call for that argument.
-# ●  = operator to provide default values.
+'''
 
-# Example:
-# def add_numbers(a = 7, b = 8):  # here a and b has default values 
-#     sum = a + b
-#     print('Sum:', sum)
+    ●  Default Argument :- argument that assumes a default value if a value is not provided in the function call for that argument.
+
+    ●  = operator to provide default values.
+
+'''
+
+# Example :- 
+
+def add_numbers(a = 7, b = 8):  # here a and b has default values 
+    sum = a + b
+    print('Sum:', sum)
 
 
 # function call with two arguments
-# add_numbers(2, 3)  # Output :- Sum: 5
-# # function call with one argument
-# add_numbers(a = 2) # Output :- Sum: 10
-# # function call with no arguments
-# add_numbers()  # Output :- 15
+add_numbers(2, 3)         # Output :- Sum: 5
+
+# function call with one argument
+add_numbers(a = 2)        # Output :- Sum: 10
+
+# function call with no arguments
+add_numbers()             # Output :- 15
 
 
 
 # 4) Variable-length arguments :-  ● In Python, we can pass a variable number of arguments to a function using special symbols. There are two special symbols:
 
-# 1) *args (Non-Keyword Arguments) :-  In Python, *args is used to pass a variable number of arguments to a function. It is used to pass a variable-length, non-keyworded argument list. These arguments are collected into a tuple within the function and allow us to work with them.
+# a) *args (Non-Keyword Arguments) :-  In Python, *args is used to pass a variable number of arguments to a function. It is used to pass a variable-length, non-keyworded argument list. These arguments are collected into a tuple within the function and allow us to work with them.
 
 # Example 1 :- 
 # Python program to illustrate *args for variable number of arguments
 def myFun(*argv):
    for arg in argv: 
-      print(arg)
+      print(arg)           
 
 
 myFun('Hello', 'Welcome', 'to', 'Hubli')
 
 
-# Example2:
+'''
+
+Output :- 
+
+Hello
+Welcome
+to
+Hubli
+
+'''
+
+# 🔹 When Should You Use *args?
+
+'''
+Use *args when :- 
+
+   1) You don't know in advance how many arguments will be passed.
+
+   2) You need flexibility in function calls.
+
+   3) You want to keep code cleaner and avoid passing lists manually.
+
+'''
+
+# Example 2 :- 
 # program to find sum of multiple numbers
 def find_sum(*numbers):
       result = 0
       for num in numbers:
         result = result + num
-        print("Sum = ", result)
+        print("Sum = ", result)         
 
 
 # function call with 3 arguments
 find_sum(1, 2, 3)
+
 # function call with 2 arguments
 find_sum(4, 9)
 
 
+'''
 
-# 2) **kwargs (Keyword Arguments) :- In Python, **kwargs is used to pass a keyworded, variable-length argument list. We call kwargs with a double star. The reason for this is that the double star allows us to pass over keyword arguments (in any order). Arguments are collected into a dictionary within the function that allow us to access them by their keys.
+Output :- 
 
-# Example:
+Sum =  1
+Sum =  3
+Sum =  6
+Sum =  4
+Sum =  13
+
+'''
+
+
+
+
+# b) **kwargs (Keyword Arguments) :- In Python, **kwargs is used to pass a keyworded, variable-length argument list. We call kwargs with a double star. The reason for this is that the double star allows us to pass over keyword arguments (in any order). Arguments are collected into a dictionary within the function that allow us to access them by their keys.
+
+# Example :- 
+
 # Python program to illustrate
+
 # *kwargs for variable number of keyword arguments
 def myFun(**kwargs):
     for key, value in kwargs.items():
-        print("%s == %s" % (key, value))
+        print("%s == %s" % (key, value))         
 
 # Driver code
 myFun(first='hello', mid='welcome to', last='Hubli')
+
+
+'''
+
+Output :- 
+
+first == hello
+mid == welcome to
+last == Hubli
+
+'''
+
 
 
 # Local and Global Variables :-
 
 '''
 
-● When we declare a variable inside a function it become a local variable
+● When we declare a variable inside a function it become a local variable.
 ● A Local variable is a variable whose scope is only limited to that function Where it is
 created.
 ● In the Following example the variable a is declared inside myfunction() and hence it
-is available inside that function
+is available inside that function.
 ● Once we come out of function the variable a is removed from memory.
 
 '''
@@ -557,15 +686,16 @@ is available inside that function
 def myfunction():
     a=1 # this is local variable
     a=a+1
-    print(a)
+    print(a)               # Output :-  2
 
 
 myfunction()
-# print(a)  # Output :- NameError: name 'a' is not defined
+print(a)                  # Output :- NameError : name 'a' is not defined
 
 
 
 # Global variables :-
+
 '''
 These are those which are defined outside any function and which are accessible throughout the program, i.e., inside and outside of every function.
 
@@ -575,12 +705,14 @@ These are those which are defined outside any function and which are accessible 
 a=1 #this is global variable
 def myfunction():
        b=2
-       print('a=', a) # display global variable
-       print('b=',b) #  display local variable
+       print('a=', a)      # display global variable  :-  a = 1
+
+       print('b=',b)       #  display local variable  :-  b = 2
 
 myfunction()
-# print(a)
-# print(b)  # Output :- NameError : name 'b' is not defined 
+print(a)         # Output :-  1
+
+# print(b)                 # Output :- NameError : name 'b' is not defined 
 
 
 
@@ -596,23 +728,148 @@ the keyword global before the variable in the beginning of the function.
 '''
 
 # Example :- 
-a=1 #this is global variable
+a=1 # this is global variable
 def myfunction():
      global a
      a=2
-     print('Inside myfunction a = ', a) # display global variable
+     print('Inside myfunction a = ', a)     # display global variable
 
 myfunction()
-print('Outside myfunction  a = ', a)   # Output :- a = 2
+print('Outside myfunction  a = ', a)        # Output :- a = 2
 
 
-# Write a Python program to read a number and check if it is less than 50 . Use functions for reading and for checking . It should work till the read number is zero ?
 
 
-# Write a Python program on Variable Length Arguments  ? 
+# Q1)  Write a Python program to read a number and check if it is less than 50 . Use functions for reading and for checking . It should work till the read number is zero ?
 
 
-# Lambda/Anonymous function :- 
+def read_and_check(num):
+    while(num!=0):
+        num = int(input("Enter any Number :-  "))
+        if num<50:
+            print(num)
+        else:
+            print("Greater or equal to 50")
+    print(f"{num} is equal to 0")
+            
+            
+num=None
+read_and_check(num)
+    
+
+'''
+
+Output :- 
+
+Enter any Number :-  5
+5
+Enter any Number :-  12
+12
+Enter any Number :-  45
+45
+Enter any Number :-  56
+Greater or equal to 50
+Enter any Number :-  100
+Greater or equal to 50
+Enter any Number :-  -1
+-1
+Enter any Number :-  0
+0
+0 is equal to 0
+
+'''
+
+
+
+# Earlier Used Return , It did not work because  ? :- 
+
+def check_number(num):
+    while num != 0:
+        num = int(input("Enter a number: "))
+        if num < 50:
+            return num  # 🚨 Function exits immediately!
+        else:
+            return "Greater or equal to 50"  # 🚨 Function exits before looping again!
+
+    return "Exit"  # 🚫 Never reached in most cases
+
+
+# OR
+
+def read():
+    num = int(input("Enter your number :- "))
+    return num
+
+def check(num):
+    if num >0 and num <50:
+        for i in range(num , -1,-1):
+            print(i)
+    elif num<=0:
+        for i in range(num , 1 ,1):
+            print(i)
+    else:
+        print("Not valid")
+
+num = read()
+check(num)
+            
+
+'''
+
+Output :- 
+
+Enter your number :- 10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+'''
+
+
+
+
+# Q2) Write a Python program on Variable Length Arguments  ? 
+
+def sum(input , *args):
+    sum = 0
+    print("Formal Arguments :- ",input)
+    for i in args:
+        sum = sum + i 
+        print("Sum of the args is :- ",(input+sum))
+
+
+sum(3,4,5,3)
+sum(10,4,5,3)
+
+
+'''
+
+Output :- 
+
+Formal Arguments :-  3
+Sum of the args is :-  7
+Sum of the args is :-  12
+Sum of the args is :-  15
+
+Formal Arguments :-  10
+Sum of the args is :-  14
+Sum of the args is :-  19
+Sum of the args is :-  22
+
+'''
+
+
+
+
+# Lambda/Anonymous function :-   
 
 '''
 
@@ -649,13 +906,49 @@ Here,
 
 # Example :- 
 # lambda that accepts one argument 
-greet_user = lambda name : print("Hey there " , name)
+greet_user = lambda name : print("Hey there " , name)         # Output :- Hey there  Madhav P
 
 # lambda call
 greet_user("Madhav P")
 
 
-# Write a Python Program on Lambda Functions with Different Methods ? 
+
+# Q3)  Write a Python Program on Lambda Functions with Different Methods ? 
+from functools import *
+
+def fil():
+    Lst = [10,23,45,46,70,99]
+    lst1 = list(filter(lambda x : (x%2==0),Lst))
+    print(lst1)
+
+
+def map1():
+    Lst = [10,23,45,46,70,99]
+    lst2 = list(map(lambda x : x * x ,Lst))
+    print(lst2)
+
+
+def red():
+    x1 = [1,2,3,4,5]
+    result = reduce(lambda x , y : x * y,x1)
+    print(result)
+
+
+fil()
+map1()
+red()
+
+
+'''
+
+Output :- 
+
+[10, 46, 70]
+[100, 529, 2025, 2116, 4900, 9801]
+120
+
+'''
+
 
 
 
@@ -698,9 +991,9 @@ def fact(n):
 
 
 def factorial():
-    print("Enter any number :- ")
-    n = int(input())
-    print(f" Factorial of {n} is :- ",fact(n))
+    print("Enter any number :- ")                  
+    n = int(input())                # Output :- 5
+    print(f" Factorial of {n} is :- ",fact(n))     # Output :-  Factorial of 5 is :-  120
 
 
 factorial()
@@ -716,9 +1009,9 @@ def Add(limit):
 
 
 def SUM():
-    print("Enter the limit :- ")
-    limit = int(input())
-    print(f" Sum  of {limit} Natural numbers is :- ",Add(limit))
+    print("Enter the limit :- ")       
+    limit = int(input())               # Output :- 5
+    print(f" Sum  of {limit} Natural numbers is :- ",Add(limit))           # Output :-    Sum  of 5 Natural numbers is :-  4
  
 
 SUM()
