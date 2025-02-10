@@ -1,5 +1,7 @@
 # Types of Loops :- 
-''' 
+
+'''
+
 1) Entry-Controlled Loops :- In an entry-controlled loop, the condition is evaluated before the loop's body is executed. This means that if the condition is false from the beginning, the loop's body will not execute even once. Examples :- a) For Loop b) While Loop
 
     
@@ -43,6 +45,7 @@
 
 
 '''
+
 print(1)
 print(2)
 print(3)
@@ -51,17 +54,20 @@ print(5)
 print() 
 
 for i in range(1, 6):
-    print(i,end=' ') # Output :- 1 2 3 4 5 
+    print(i,end=' ')        # Output :-  1 2 3 4 5 
 print()
+
 
 
 # While - Loop :- 
 i=1
 
 while(i<6):
-    print(i , end=' ')
+    print(i , end=' ')      # Output :-  1 2 3 4 5 
     i+=1
 print()
+
+
 
 
 # Quiz ans 1:- 
@@ -72,6 +78,65 @@ while(i<51):
 print()
 
 
+'''
+
+Output :- 
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+
+'''
+
+
+
 # Quiz ans 2 :-
 l = [1, "Bridul" , "Shree Priya" , True , 34.56, "Raghav" , "Sumit Bilagi"]
 i=0
@@ -80,10 +145,27 @@ while i<len(l):
     i+=1
 
 
+'''
+
+Output :- 
+
+1
+Bridul
+Shree Priya
+True
+34.56
+Raghav
+Sumit Bilagi
+
+'''
+
+
 
 # For Loop :-
+
 '''
-range: Represents a sequence of numbers. The range() function can take a maximum of three arguments:
+
+range :-   Represents a sequence of numbers. The range() function can take a maximum of three arguments:
 syntax :- range(start, stop, step) . 
 The start and step parameters in range() are optional.
 
@@ -93,23 +175,52 @@ for i in range(4):
     print(i)
 print()
 
+'''
+
+Output :- 
+
+0
+1
+2
+3
+
+'''
+
 
 # for loop in List :- 
 l = [1 , 4, 6 , 234 , 6 , 764]
 for i in l:
-    print(i , end= ' ')
+    print(i , end= ' ')            # Output :-  1 4 6 234 6 764 
 print()
+
+
 
 # for loop in Tuple :-
 t = (6 , 231 , 75 ,75 ,122)
 for i in t:
-    print(i, end= ' ')
+    print(i, end= ' ')            # Output :-   6 231 75 75 122
 print()
+
+
 
 # for loop in String :- 
 s = "Harry"
 for i in s:
     print(i)
+
+
+'''
+
+Output :- 
+
+H
+a
+r
+r
+y
+
+
+'''
 
 
 # For Loop with Else :- 
@@ -118,3 +229,16 @@ l = [1 , 7 ,8]
 for item in l:print(item)
 
 else: print("done") # this is printed when the loop exhausts ! 
+
+
+'''
+
+Output :- 
+
+1
+7
+8
+done
+
+
+'''
