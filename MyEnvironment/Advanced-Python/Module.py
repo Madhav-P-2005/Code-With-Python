@@ -1,9 +1,9 @@
-def myfunc():
-    print("Hello World ")
+# def myfunc():
+#     print("Hello World ")
 
 
-myfunc()
-print(__name__)
+# myfunc()
+# print(__name__)
 
 
 # if __name__ == "__main__":
@@ -11,8 +11,6 @@ print(__name__)
 #     print("We are directly running this code")
 #     myfunc()
 #     print(__name__)     # Output :- __main__
-
-
 
 '''
 
@@ -24,3 +22,33 @@ __main__
 
 
 '''
+
+
+
+
+# Without IF__Name__ == "__main__"
+def Welcome():
+    print("This statement is from Module.py file")
+
+
+# Welcome()
+
+
+'''
+
+Output :- 
+
+>>> python MyEnvironment/Advanced-Python/Module.py
+
+This statement is from Module.py file
+
+
+'''
+
+
+# Using IF __NAME__ == __MAIN__   ?
+
+print(__name__)
+
+if __name__ == "__main__":
+    Welcome()
