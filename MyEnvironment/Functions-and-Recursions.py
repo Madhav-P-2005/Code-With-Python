@@ -1,6 +1,7 @@
 # Functions :- A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.
 
 # Advantages of functions :- 
+
 '''
 
 1) Functions are important in programming because they are used to process
@@ -157,6 +158,7 @@ greet()
 
 
 
+
 # TYPES OF  FUNCTIONS IN  PYTHON  :- 
 
 '''
@@ -168,6 +170,7 @@ There are two types of functions in python :-
 
 
 '''
+
 
 # Build In Functions :- 
 
@@ -229,11 +232,13 @@ print(sum([1, 2, 3]))         # Output :-   6
 
 
 
+
 # 8) max() :- Returns the largest item in an iterable or the largest of two or more arguments.
 
 # Syntax :- max(iterable, *[, key, default])
 
 print(max([1, 2, 3]))        # Output :-  3
+
 
 
 
@@ -253,11 +258,13 @@ print(list('hello'))         # Output :-  ['h', 'e', 'l', 'l', 'o']
 
 
 
+
 # 11) dict() :- Creates a new dictionary.
 
 # Syntax :- dict([mapping-or-iterable])
 
 print(dict(a=1, b=2))        # Output :-  {'a': 1, 'b': 2}
+
 
 
 
@@ -269,11 +276,13 @@ print(set([1, 2, 2, 3]))     # Output :-  {1, 2, 3}
 
 
 
+
 # 13) tuple() :- Returns a tuple.
 
 # Syntax :- tuple([iterable])
 
 print(tuple([1, 2, 3]))     # Output :-  (1, 2, 3)
+
 
 
 
@@ -285,11 +294,13 @@ print(list(range(1, 5)))    # Output :-  [1, 2, 3, 4]
 
 
 
+
 # 15) abs() :- Returns the absolute value of a number.
 
 # Syntax :- abs(x)
 
 print(abs(-5))              # Output :-  5
+
 
 
 
@@ -301,11 +312,13 @@ print(round(5.678, 2))     # Output :-  5.68
 
 
 
+
 # 17) pow() :- Returns x to the power y.
 
 # Syntax :- pow(x, y[, z])
 
 print(pow(2, 3))          # Output :-   8
+
 
 
 
@@ -317,12 +330,14 @@ print(list(zip([1, 2, 3], ['a', 'b', 'c'])))       # Output :-  [(1, 'a'), (2, '
 
 
 
+
 # 19) enumerate() :- Returns an enumerate object.
 
 # Syntax :- enumerate(iterable[, start=0])
 
 for i, val in enumerate(['a', 'b', 'c']):
     print(i, val) 
+
 
 
 '''
@@ -426,6 +441,239 @@ print(list(map(lambda x: x * 2, [1, 2, 3])))       # Output: [2, 4, 6]
 # Syntax :-  eval(expression[, globals[, locals]])
 
 print(eval('1 + 2'))               # Output: 3
+
+
+
+
+# 31) dir() method :- 
+
+'''
+
+   >>> The dir() function is a built-in Python function that returns a list of attributes and methods associated with an object. It helps inspect an object’s properties, functions, and available operations.
+
+'''
+
+
+# 2️⃣)  Syntax :-    dir([object])
+
+'''
+
+🔹 object (optional) → The object whose attributes and methods you want to inspect.
+🔹 If no argument is provided, dir() returns a list of names in the current scope.
+
+'''
+
+
+# 3️⃣)  How dir() Works ?
+
+'''
+
+1) If used without arguments -→  Returns all defined names in the current scope.
+
+2) If used with an object -→   Lists all attributes and methods of that object.
+
+
+'''
+
+# 4️⃣ Examples of dir() in Action ? 
+
+# 🔹 Example 1 :-  Using dir() Without Arguments
+
+x = 10
+y = "Hello"
+print(dir())  # Shows all defined variables and functions in the current scope
+
+
+'''
+
+Output :-    ['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'traceback', 'x', 'y']
+
+'''
+
+
+# 🔹 Example 2 :-  Using dir() With a Built-in Object 
+
+print(dir(str))                   # Shows all methods of the 'str' class                 
+
+
+
+# Output :- 
+
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+
+
+# 🔹 Example 3 :-  Using dir() With a User-Defined Class
+
+class Demo:
+    def __init__(self, num):
+        self.num = num
+    def show(self):
+        print(self.num)
+
+obj = Demo(5)
+print(dir(obj))  # Lists all attributes & methods of 'obj'
+
+
+
+# Output :- 
+
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'num', 'show']
+
+
+
+# 5️⃣) Usage of dir()  ? 
+
+
+'''
+
+✅ Debugging & Exploring Objects → Helps understand available attributes of an object.
+
+✅ Checking Methods in a Module → Example: dir(math) lists all functions in the math module.
+
+✅ Inspecting User-Defined Classes → Find all attributes and methods of an instance.
+
+✅ Understanding Scope → See all defined names in the current program.
+
+
+'''
+
+
+
+
+# Example :- 
+
+import math
+
+print(dir(math))
+
+
+# Output :- 
+
+['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'cbrt', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 'dist', 'e', 'erf', 'erfc', 'exp', 'exp2', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 'lcm', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'nextafter', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'sumprod', 'tan', 'tanh', 'tau', 'trunc', 'ulp']
+
+
+
+
+# What are Docstrings  ?
+
+'''
+
+>>> Docstrings (documentation strings) are multi-line string literals used to describe the purpose and functionality of a function, class, or module. They act as inline documentation for better code readability.
+
+'''
+
+# 1️⃣ Definition :-    A docstring is a string written as the first statement inside a function, class, or module to describe what it does.
+
+
+
+# 2️⃣ Syntax  :-   docstring is enclosed within triple double-quotes (""") or triple single-quotes (''') and is placed right after the function, class, or module definition
+
+def function_name():
+    """This is a docstring.
+    It describes what the function does."""
+    pass
+
+
+# 3️⃣ How It Works :- 
+
+'''
+
+   1) When a function, class, or module contains a docstring, Python stores it in the __doc__ attribute of that object.
+
+   2) You can access it using: :-   function_name.__doc__
+
+'''
+
+
+# 4️⃣ Usage of Docstrings  :- 
+
+'''
+
+ a) Function Docstrings :-   Used to explain what the function does, its parameters, and return values.
+
+
+def add(a, b):
+    """Takes two numbers and returns their sum."""
+    return a + b
+
+print(add.__doc__)  # Output: Takes two numbers and returns their sum.
+
+
+
+ b) Class Docstrings  :- 
+
+
+class Car :
+
+    """ This class represents a Car object. """
+    
+    def __init__(self, brand, model):
+
+        """ Initializes the car with brand and model. """
+        self.brand = brand
+        self.model = model
+
+print(Car.__doc__)  # Output: This class represents a Car object.
+
+
+
+ c) Module Docstrings  :-   Used at the beginning of a module (Python file) to explain its contents.
+
+
+""" This module provides utility functions for mathematical operations."""
+def multiply(x, y):
+
+    """ Returns the product of two numbers. """
+    return x * y
+
+
+
+
+ d) Multiline Docstrings (with Description, Parameters, and Returns) :-   For functions with detailed explanations :- 
+
+
+def greet(name):
+
+    """
+    Greets the user by name.
+    
+    Parameters:
+    name (str): The name of the user.
+    
+    Returns:
+    str: A greeting message.
+    """
+    return f"Hello, {name}!"
+
+print(greet.__doc__)
+
+
+'''
+
+
+# Example 
+def square(n):
+    ''' 
+    Takes in a number n , returns the square of n 
+    '''
+    print(n**2)
+square(5)
+print(square.__doc__)
+
+
+
+# what is PEP ?
+
+'''
+
+>>> PEP (Python Enhancement Proposal) is a design document that provides information, guidelines, and standards for improvements in Python. It describes new features, design changes, and best practices.
+
+'''
+
+# Example :- 
+import this  # Displays Zen of Python (PEP 20)
+
 
 
 

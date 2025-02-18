@@ -838,6 +838,7 @@ print()
 
 
 
+
 '''
 
 >>>  Using the :: Syntax for Slicing :-  The slicing syntax in Python uses the start:stop:step format, and you can use negative steps to reverse the tuple or sequence :- 

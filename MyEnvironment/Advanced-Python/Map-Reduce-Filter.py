@@ -140,9 +140,9 @@ print(reduce(multiply , List))    # Output :-   120
 
 '''
 
-Function	             Purpose            	                              Input	                                                        Output
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-map()	       Transforms each element in an iterable.	                  Function + Iterable(s)	                                      Iterable (transformed).
+Function	              Purpose            	                              Input	                                                        Output
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+map()	       Transforms each element in an iterable.	                  Function + Iterable(s)	                                       Iterable (transformed).
 filter()	Filters elements based on a condition.	          Function (returns True/False) + Iterable	                          Iterable (filtered).
 reduce()	Aggregates elements into a single value.	     Function (binary operation) + Iterable (+ optional initializer)	                 Single Value.
 

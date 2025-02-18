@@ -1,27 +1,27 @@
-# DRY Principle :- Do not Repeat Yourself . 
+# 💡 DRY Principle :- Do not Repeat Yourself . 
 
 # Problems in Procedure Oriented Approach :-
 
 '''
 
-1) Procedural programming mainly focuses on procedures or functions. Less attention is
+1️⃣) Procedural programming mainly focuses on procedures or functions. Less attention is
 given to the data.
 
-2) The data and functions are separate from each other.
+2️⃣) The data and functions are separate from each other.
 
-3) Global data is freely moving and is shared among various functions. Thus, it becomes
+3️⃣) Global data is freely moving and is shared among various functions. Thus, it becomes
 difficult for programmers to identify and fix issues in a program that originate due to
 incorrect data handling.
 
-4) Changes in data types need to be carried out manually all over the program and in the
+4️⃣) Changes in data types need to be carried out manually all over the program and in the
 functions using the same data type.
 
-5) Limited and difficult code reusability.
+5️⃣) Limited and difficult code reusability.
 
-6) It does not model real-world entities (e.g., car, table, bank account, loan) very well where
+6️⃣) It does not model real-world entities (e.g., car, table, bank account, loan) very well where
 we as a human being, perceive everything as an object.
 
-7) The procedural programming approach does not work well for large and complex
+7️⃣) The procedural programming approach does not work well for large and complex
 systems.
 
 
@@ -31,19 +31,20 @@ systems.
 
 """
 
-1) Python is an object-oriented programming language.
+1️⃣) Python is an object-oriented programming language.
 
-2) Almost everything in Python is an object, with its properties and methods.
+2️⃣) Almost everything in Python is an object, with its properties and methods.
 
-3) A Class is like an object constructor, or a "blueprint" for creating objects.
+3️⃣) A Class is like an object constructor, or a "blueprint" for creating objects.
 
 """
+
 
 # Features Of Object-Oriented Programming (OOP) ?
 
 '''
 
-1) Class :- A class is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.
+1️⃣) Class :- A class is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.
 
 Syntax :- 
 class ClassName:
@@ -59,7 +60,7 @@ How it works :-  When a class is defined, no memory is allocated until objects o
 
 
 
-2) Object :- An object is an instance of a class. It contains data and methods defined in the class. 
+2️⃣) Object :- An object is an instance of a class. It contains data and methods defined in the class. 
 
 Syntax :-  obj = ClassName(parameters)
 
@@ -69,7 +70,7 @@ How it works :-  When an object is created, memory is allocated and the __init__
 
 
 
-3) Encapsulation :-  Encapsulation is the bundling of data (attributes) and methods that operate on the data into a single unit (class), and restricting access to some of the object's components.
+3️⃣) Encapsulation :-  Encapsulation is the bundling of data (attributes) and methods that operate on the data into a single unit (class), and restricting access to some of the object's components.
 
 
 Syntax :- 
@@ -86,7 +87,7 @@ How it works :-  By defining private attributes (prefixed with __), access to th
 
 
 
-4) Abstraction :-  Abstraction is the concept of hiding the complex implementation details and showing only the necessary features.
+4️⃣) Abstraction :-  Abstraction is the concept of hiding the complex implementation details and showing only the necessary features.
 
 
 Syntax :- 
@@ -106,7 +107,7 @@ How it works :-  Abstract classes and methods provide a way to define common int
 
 
 
-5) Polymorphism :- Polymorphism allows methods to do different things based on the object it is acting upon.
+5️⃣) Polymorphism :- Polymorphism allows methods to do different things based on the object it is acting upon.
 
 
 Syntax :- 
@@ -131,7 +132,7 @@ How it works :-  Methods in different classes can have the same name and provide
 
 
 
-6) Inheritance :- Inheritance allows a class (child class) to inherit properties and behavior from another class (parent class).
+6️⃣) Inheritance :- Inheritance allows a class (child class) to inherit properties and behavior from another class (parent class).
 
 Syntax :- 
 
@@ -151,7 +152,7 @@ How it works :-  The child class inherits methods and attributes from the parent
 
 
 
-7) Dynamic Binding :-  Dynamic binding refers to the process of linking a method call to the method body at runtime.
+7️⃣) Dynamic Binding :-  Dynamic binding refers to the process of linking a method call to the method body at runtime.
 
 Syntax :- 
 
@@ -174,7 +175,7 @@ How it works :- The method to be called is determined at runtime based on the ob
 
 
 
-8. Message Passing :- Message passing is the process by which an object sends data to another object or asks for data from another object.
+8️⃣) Message Passing :- Message passing is the process by which an object sends data to another object or asks for data from another object.
 
 
 Syntax :- obj.method(parameters)
@@ -187,4 +188,3 @@ How it works :-  Objects communicate with each other by calling methods and pass
 
 
 '''
-
