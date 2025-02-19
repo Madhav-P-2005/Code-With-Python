@@ -13,6 +13,7 @@
 
 
 # Parameters :- 
+
 '''
 
 1) iterable :-  Any iterable object (e.g., list, tuple, string, dictionary, etc.).
@@ -29,6 +30,7 @@ Returns :-
 # How It Works :- 
 
 '''
+
 1) enumerate() takes an iterable and a starting index as input.
 
 2) It iterates through the items of the iterable, keeping track of the index of each item.
@@ -61,6 +63,51 @@ for item in l:
 for index,item in enumerate(l):
     print(f"The item numbeer at index {index} is {item}")
 
+'''
 
+Output :- 
+
+The item number at 0 is 3
+The item number at 1 is 513
+The item number at 2 is 53
+The item number at 3 is 535
+
+The item numbeer at index 0 is 3
+The item numbeer at index 1 is 513
+The item numbeer at index 2 is 53
+The item numbeer at index 3 is 535
+
+
+'''
+
+
+# Example 2 :- Using start ? 
+
+marks = [1 ,2 ,3 ,4, 5, 6, 7,8,9,10]
+
+for index , mark in enumerate(marks , start=1):
+    print(mark)
+    if index==5:
+        print("Madhav has arrived !")
+
+
+
+'''
+
+Output :- 
+
+1
+2
+3
+4
+5
+Madhav has arrived !
+6
+7
+8
+9
+10
+
+'''
 
 # Enumerate in tuples , dictionaries , ....many more .. to be done .  # Pending work 

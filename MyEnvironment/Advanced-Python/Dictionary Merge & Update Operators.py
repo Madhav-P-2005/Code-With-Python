@@ -126,5 +126,3 @@ print(merged_dict)         # Output :- {'a': {'y': 2}, 'b': 2, 'c': 3}
      a) These operators only merge top-level keys and do not perform a deep merge for nested dictionaries.
 
 '''
-
-

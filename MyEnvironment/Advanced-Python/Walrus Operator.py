@@ -59,6 +59,7 @@ if(n := len([1, 2, 3 ,4 ,5])) > 3:
             print(f"List is too Long ({n} elements , expected < = 3) ")  # Output :- List is too Long (5 elements , expected < = 3) 
 
 
+
             
 # a) In a While Loop :-  Without the use of Walrus Operator 
 data = input("Enter a value ( or 'stop' to quit) :-  ")
@@ -83,8 +84,9 @@ Enter a value (or 'stop' or quit) :- ....
 ...
 
 
-'''
 
+
+'''
 
 # With the walrus Operator :- 
 while (data := input("Enter a value (or 'stop' to quit) :- ")) != 'stop':
@@ -101,6 +103,9 @@ Output :-
    Enter a value (or 'stop' to quit) :- stop
    
 '''
+
+
+
 
 # Here, data is assigned and checked in the same line, avoiding redundancy.
 
@@ -127,6 +132,8 @@ Your string is equal to 5
 '''
 
 
+
+
 # With the walrus operator :-
 
 if (value := len(input("Enter you string :- "))) >5 :print(f"Your string is more than {value}")
@@ -143,6 +150,9 @@ Enter you string :- Karan
 Your string is equal to 5
 
 '''
+
+
+
 
 # In List Comprehensions :- 
 
