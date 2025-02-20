@@ -168,7 +168,9 @@ print(Tuple_items)   # Output :- ('hello ji ', 4.5)
    2) The type of the values.
 
 '''
+
 # ' any '  allows any type for the values .
+
 
 couples_data : Dict[str , any] = {"Raj" : "Simran" , "Prem" : "Paro" }
 print(couples_data)   # Output :-  {'Raj': 'Simran', 'Prem': 'Paro'}
