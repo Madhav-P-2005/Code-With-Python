@@ -49,6 +49,7 @@ Result =  "-".join(List)
 print(Result)             # Output :- Marathas-chhatrapati shivaji maharaj-Saibai Bhonsale
 
 
+
 Result = "::".join(List)     
 
 
@@ -164,10 +165,10 @@ print(result)         # Output: name: Alice, age: 25, city: Paris
 # Important Notes :- 
 
 
-# 1) All Elements Must Be Strings: The elements in the iterable must be strings, or a TypeError will occur.
+# 1) All Elements Must Be Strings :-  The elements in the iterable must be strings, or a TypeError will occur.
 
-# nums = [1, 2, 3]
-# print(",".join(nums))   # Raises: TypeError: sequence item 0: expected str instance, int found
+nums = [1, 2, 3]
+print(",".join(nums))   # Raises: TypeError: sequence item 0: expected str instance, int found
 
 
 # Solution: Convert elements to strings :- 
@@ -180,9 +181,10 @@ print(result)              # Output: 1,2,3
 
 
 
-# 2) Works Only on Iterables: The argument to join() must be an iterable (e.g., list, tuple). Non-iterable arguments will raise an error.
+# 2) Works Only on Iterables :-  The argument to join() must be an iterable (e.g., list, tuple). Non-iterable arguments will raise an error.
 
-# 3) Order Matters: The separator string is specified first, followed by the iterable.
+
+# 3) Order Matters :-  The separator string is specified first, followed by the iterable.
 
 
 
