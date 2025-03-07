@@ -155,11 +155,18 @@ Output :-  starts with 1 .
 
 '''
 
+
 # [1, _] vs. [1, *_] :- 
 
-# Case 1: [1, _] :-  This pattern matches a list with exactly two elements, where the first element is 1, and the second element can be any single value.
 
-# Case 2: [1, *_] :- This pattern matches a list with one or more elements, where the first element is 1, and the rest of the list (0 or more elements) is captured by the wildcard *_.
+'''
+
+Case 1)  [1, _] :-  This pattern matches a list with exactly two elements, where the first element is 1, and the second element can be any single value.
+
+Case 2)  [1, *_] :- This pattern matches a list with one or more elements, where the first element is 1, and the rest of the list (0 or more elements) is captured by the wildcard *_.
+
+'''
+
 
 
 # c) Matching Dictionaries :- 
@@ -203,6 +210,7 @@ Output :- Its's a float
 '''
 
 
+
 # How Does It Work ? :- 
 
 '''
@@ -220,6 +228,9 @@ Output :- Its's a float
     >>  If _ is not present, no action is taken.'''
 
 
+
+
+
 # Why Use match? (Advantages) :- 
 
 '''
@@ -233,6 +244,8 @@ Output :- Its's a float
 4) Error-Prone Conditions :-  Eliminates repetitive checks like if var == value1.
 
 '''
+
+
 
 # Limitations of match :-  
 

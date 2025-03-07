@@ -2,7 +2,9 @@
 
 
 # When Released ? 
+
 '''
+
   >> Exception handling was introduced in Python 2.0 (released in October 2000). However, the features were refined in Python 3.x versions.
 
 '''
@@ -15,7 +17,9 @@
    
 '''
 
+
 # Example :- 
+
 '''
 
 try:
@@ -27,7 +31,6 @@ except SomeException:
 
 
 
-
 '''
 
     b) Python 3.x: The exception handling was further refined, and else and finally blocks were added. Additionally, the as keyword was introduced for better exception management.
@@ -35,6 +38,7 @@ except SomeException:
 '''
 
 # Example (in Python 3) :- 
+
 '''
 
 try:
@@ -109,7 +113,9 @@ these three types:
 
 
 '''
+
 # Compile-Time Errors :- 
+
 '''
 
     • These are syntactical errors found in the code, due to which a program fails to compile.
@@ -123,6 +129,7 @@ these three types:
 
 
 # Runtime Errors :- 
+
 '''
 
     • When Python Virtual Machine cannot execute the byte code, it flags runtime error.
@@ -136,6 +143,7 @@ these three types:
 
 
 # Logical Errors :- 
+
 '''
 
     • These errors depict flaws in the logic of the program.
@@ -232,7 +240,7 @@ try:
 
 '''
 except Exceptionname: 
-              statements
+               statements
 
 '''
 
@@ -278,6 +286,7 @@ main()
 
 
 '''
+
 Output :- 
 
 Hey , Enter a number : 556
@@ -285,6 +294,8 @@ Hey , Enter a number : 556
 You have entered the finally block
 
 '''
+
+
 # The following points are noteworthy :- 
 
 '''
@@ -298,6 +309,7 @@ A single try block can be followed by several except blocks.
   • When there is no exception, else block is executed after try block.
 
 Finally block is always executed.
+
 
 '''
 
@@ -324,25 +336,26 @@ finally:
 
 '''
 
+
 # Example 1 :-   for Divide by zero 
-# try:
-#     a = int(input("Enter the numerator :- "))
-#     b = int(input("Enter the numerator :- "))
-#     # b = input("Enter the denominator :- ")
-#     divide = a/b
-#     print("Divison value is :- ",divide)
+try:
+    a = int(input("Enter the numerator :- "))
+    b = int(input("Enter the numerator :- "))
+    # b = input("Enter the denominator :- ")
+    divide = a/b
+    print("Divison value is :- ",divide)
     
     
-# except ZeroDivisionError as z:
-#           print("Error :- ",z)
-# except TypeError:
-#         print("Typing error occured")
-# except RuntimeError:
-#         print("Excecution Error ")
-# else:
-#     print("No error")
-# finally:
-#     print("Program ended . bye")
+except ZeroDivisionError as z:
+          print("Error :- ",z)
+except TypeError:
+        print("Typing error occured")
+except RuntimeError:
+        print("Excecution Error ")
+else:
+    print("No error")
+finally:
+    print("Program ended . bye")
 
 
 '''
@@ -358,13 +371,13 @@ Program ended . bye
 
 
 # Example 2 :- Division by Zero 
-# a = int(input("Enter a number :- "))
-# b = int(input("Enter a number :- "))
+a = int(input("Enter a number :- "))
+b = int(input("Enter a number :- "))
 
-# if(b==0):
-#       raise ZeroDivisionError("Hey our program is not meant to divide numbers by zero ")
-# else:
-#       print(f"The division a/b is {a/b}")
+if(b==0):
+      raise ZeroDivisionError("Hey our program is not meant to divide numbers by zero ")
+else:
+      print(f"The division a/b is {a/b}")
 
 
 
@@ -377,8 +390,7 @@ Program ended . bye
                             
 Exception Class                |                            Description                                                                                                 |
 Name                           |                                                                                                                                        |
-                               |                                                                                                                                        |
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Exception                                 Represents any type of exception. All exceptions are sub classes of this class.
 
@@ -432,17 +444,17 @@ ZeroDivisionError                         Raised when the denominator is zero in
 
 # A Python program to handle IOError produced by open() function ?
 
-# try:
-#       name = input("Enter filename : ")
-#       f = open(name , 'r')
+try:
+      name = input("Enter filename : ")
+      f = open(name , 'r')
 
-# except IOError:
-#       print("File not Found ",name)
+except IOError:
+      print("File not Found ",name)
 
-# else:
-#       n = len(f.readlines())
-#       print(name , 'has', n ,'lines')
-#       f.close
+else:
+      n = len(f.readlines())
+      print(name , 'has', n ,'lines')
+      f.close
 
 
 '''

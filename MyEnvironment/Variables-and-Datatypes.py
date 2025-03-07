@@ -151,7 +151,3 @@ print(memory_view[1])       # Output :-  101 (ASCII value of 'e')
 
 nothing = None
 print(nothing)             # Output :-  None
-
-
-
-
