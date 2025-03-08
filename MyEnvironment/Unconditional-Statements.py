@@ -49,6 +49,59 @@ while(i<45):
     i+=1
 
 
+'''
+
+Output :- 
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+
+'''
+
+
 
 
 # 4) return :-  Exits a function and optionally returns a value to the caller. 
@@ -109,7 +162,15 @@ print("This will not be printed.")
 
 # 6) assert() :-  Used for debugging purposes. Tests a condition and raises an AssertionError if the condition is false. Usage: Ensures that conditions expected to be true actually hold at specific points in the code.
 
-x = 5
-assert x <= 0, "x should be positive"  # No error if x > 0
 
-# If x <= 0, raises AssertionError with the message "x should be positive"
+x = 5
+assert x <= 0, "x should be positive"  # If x > 0, raises AssertionError with the message "x should be positive"
+
+# No error if x <= 0
+
+
+'''
+
+Output :-   AssertionError: x should be positive
+
+'''
