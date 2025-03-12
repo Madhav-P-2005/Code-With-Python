@@ -1,116 +1,89 @@
-# Setting Up a Virtual Environment for Your Python Project
+# Code-With-Python 🚀  
 
-## Why Use a Virtual Environment?
+## 📌 About This Repository  
 
-1️⃣ **Isolation of dependencies**: Using a virtual environment ensures that each Python project has its own dependencies, avoiding conflicts between projects.
-2️⃣ **Project-specific management**: It helps manage project-specific libraries and packages.
+This repository, **Code-With-Python**, is a structured documentation of my journey in learning Python from **scratch to advanced**. It serves as a personal reference for revisiting concepts, understanding syntax, and reinforcing learning through hands-on practice.  
+
+I am following **CodeWithHarry's** Python tutorials on YouTube, specifically  :-   
+
+- 🎥 **[Python Tutorial For Beginners (10-Hour Video)](https://www.youtube.com/watch?v=UrsmFxEIp5k)**  
+- 🎥 **[Python for Beginners (Full Course) | #100DaysOfCode](https://www.youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9)**  
+  Instructor :-  **Haris Ali Khan**  
+
+Through these resources, I am gaining practical experience by solving **practice sets, exercises, and projects**, which are documented in this repository for continuous learning and future reference.  
 
 ---
 
-## Steps to Create and Manage a Virtual Environment
+## 🏗️ Structure of the Repository  
 
-### 1️⃣ **Creating the Virtual Environment**
+📂 **Practice-Sets/** → Contains solved problems and coding challenges.  
+📂 **Exercises/** → Includes hands-on coding tasks to reinforce concepts.  
+📂 **Projects/** → Real-world applications built using Python.  
+📂 **Notes/** → Well-structured documentation of concepts, syntax, and explanations.  
+📂 **Scripts/** → Various Python scripts for automation and utilities.  
 
-- Run the following command to create a virtual environment:
+---
 
+## 🔧 Setting Up the Environment  
+
+### 1️⃣ **Create a Virtual Environment**  
 ```bash
 python -m venv MyEnvironment
 ```
+### 2️⃣ **Activate the Virtual Environment**  
+- **Windows (Command Prompt):**  
+  ```bash
+  MyEnvironment\Scripts\activate
+  ```
+- **Windows (PowerShell):**  
+  ```bash
+  MyEnvironment\Scripts\activate.ps1
+  ```
+- **macOS/Linux:**  
+  ```bash
+  source MyEnvironment/bin/activate
+  ```
 
----
-
-### 2️⃣ **Activating the Virtual Environment**
-
-- Depending on your operating system and shell, use one of the following commands:
-
-#### On Windows:
-
+### 3️⃣ **Install Required Packages**  
 ```bash
-MyEnvironment\Scripts\activate
+pip install -r requirements.txt
 ```
 
-#### On Windows (PowerShell):
-
+### 4️⃣ **Run Python Scripts**  
 ```bash
-MyEnvironment\Scripts\activate.ps1
+python script_name.py
 ```
 
-#### On macOS/Linux:
-
-```bash
-source MyEnvironment/bin/activate
-```
-
----
-
-### 3️⃣ **Deactivating the Virtual Environment**
-
-- To deactivate the virtual environment, simply run:
-
+### 5️⃣ **Deactivate the Virtual Environment**  
 ```bash
 deactivate
 ```
 
 ---
 
-### 4️⃣ **Upgrading Pip**
+## 📌 Notes  
 
-- Ensure you have the latest version of pip by running:
-
+✅ Always activate the virtual environment before installing modules or running scripts.  
+📦 Check installed packages using:  
 ```bash
-python -m pip install --upgrade pip
+pip list
+```
+📋 Save the list of dependencies:  
+```bash
+pip freeze > requirements.txt
 ```
 
 ---
 
-### 5️⃣ **Installing Required Modules**
+## 💡 Why This Repository?  
 
-- Install any necessary modules for your project. For example:
+🔹 Serves as a **quick reference guide** for revising concepts.  
+🔹 Helps in **tracking progress** through structured documentation.  
+🔹 Encourages **hands-on learning** with practice sets and projects.  
+🔹 Acts as a **personal knowledge base** for future projects.  
 
-```bash
-pip install pyjokes
-pip install pyttsx3
-```
-
----
-
-### 6️⃣ **Running Specific Files**
-
-- To run a specific Python file or script within the virtual environment, use:
-
-```bash
-python MyEnvironment/Practice-Sets/Practice-Set-9.py
-```
+This repository will keep evolving as I continue learning and applying Python in various real-world scenarios. 🚀  
 
 ---
 
-## Notes
-
-- ✅ Always activate the virtual environment before installing modules or running scripts.
-- 📦 To check the installed packages within the virtual environment, use:
-  ```bash
-  pip list
-  ```
-- 📋 To save the list of dependencies, run:
-  ```bash
-  pip freeze > requirements.txt
-  ```
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 🚀 Let's Code With Python!  

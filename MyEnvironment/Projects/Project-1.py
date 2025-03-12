@@ -36,6 +36,16 @@ else:
 
 
 
+'''
+
+Output :- 
+
+{0: 'Snake', 1: 'Water', 2: 'GUN'}
+Enter your Choice  :- 1
+Water
+The Computer's  number is :  1
+Water
+1 == 1 . Draw 😵‍💫. Better luck next Time
 
 
-
+'''

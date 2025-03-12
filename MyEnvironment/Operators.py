@@ -125,6 +125,9 @@ Final Answer :-   010110 (binary) = 22 (decimal) ✅
 
 '''
 
+
+
+
 #  Types :- 
 
 # 1) AND (&) :-  Returns 1 if both bits are 1, otherwise 0.
@@ -596,3 +599,84 @@ print("address" not in person)       # Output :-  True
 print("Alice" not in person)         # Output :-  True
 
 
+
+
+
+#  is   Vs   ==   ? 
+
+
+["Note :-  Here , is and == both are Comparision Operators"]
+
+
+a = 4
+b = "4"
+
+print(a is b)          # Exact location of object in memory     # Output :- False 
+
+
+
+print(a == b)      # Value       # Output :- False 
+
+
+
+a1 = [1 ,2 ,43]
+b1=  [1 , 2 ,43]
+
+
+print(a1 is b1)           # Output :-   False 
+
+print(a1 == b1)           # Output  :-  True 
+
+
+
+
+
+["Note :- Python takes immutable objects as same as it does not create a seperate memory location to store as it knows its constant  .   It happens with   Numeric values , Strings , Tuples "]
+
+
+
+
+a2 = 10
+b2 = 10
+
+
+print(a2 is b2)           # Output :-   True 
+
+print(a2 == b2)           # Output  :-  True 
+
+
+
+
+
+
+a3 = "Madhav"
+b3 = "Madhav"
+
+
+print(a3 is b3)           # Output :-   True 
+
+print(a3 == b3)           # Output  :-  True 
+
+
+
+
+
+a4 = (1,2,3)
+b4 = (1,2,3)
+
+
+print(a4 is b4)           # Output :-   True 
+
+print(a4 == b4)           # Output  :-  True 
+
+
+
+
+
+a5 = None
+b5 = None
+
+
+print(a5 is b5)           # Output :-   True 
+
+print(a5 == b5)           # Output  :-  True 
